@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tarjeta-boda",
+            "outputPath": "dist/invitacion/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -103,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a3394d30-ef03-4d30-a720-54fbf2931b6c"
   }
 }

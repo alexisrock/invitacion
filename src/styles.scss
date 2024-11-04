@@ -1,1 +1,613 @@
-/* You can add global styles to this file, and also import other style files */
+$colorPrincipal: #14243b;
+$colorSecundario: #f2c6c2;
+$colorTerciario: #8a675c;
+$colorCuarto: #9b8d7b;
+$colorQuinto: #092d29;
+$colorsexto: #8c3f4d;
+$fuente-secundaria: Josefin Sans;
+$sizeFuenteUno: 5rem;
+$sizeTablet: 4rem;
+$sizeFuenteUnoMoviles: 2rem;
+
+
+body {
+  background-color: $colorPrincipal;
+}
+
+.TextoUno {
+
+  color: $colorTerciario;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.Texto-Secundario {
+  margin-top: 4rem;
+  font-family: $fuente-secundaria;
+  color: $colorCuarto;
+  text-align: center;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.BtnPrincipal {
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid $colorSecundario;
+  background: $colorTerciario;
+}
+
+.BtnPrincipal:hover {
+  background: #fff;
+  color: $colorSecundario;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+  background-color: rgba(0, 0, 255, 0.5);
+  mix-blend-mode: luminosity;
+  z-index: -1;
+}
+
+.Hr1 {
+  size: 10px;
+  width: 480%;
+  position: absolute;
+  top: 5%
+}
+
+.Hr2 {
+  size: 10px;
+  top: 0%;
+  position: absolute;
+
+}
+
+.Hr3 {
+  size: 10px;
+  position: absolute;
+}
+
+.Imagen {
+  background-color: rgba(0, 0, 255, 0.5);
+  mix-blend-mode: luminosity;
+  align-items: center;
+  z-index: -1;
+}
+
+.TextoImagen {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-family: $fuente-secundaria;
+}
+
+.NombresDos {
+  position: absolute;
+  color: white;
+  font-family: $fuente-secundaria;
+}
+
+.SeparacionUno {
+  background-color: $colorTerciario;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.FranjaFaltan {
+  background-color: $colorSecundario;
+  padding-top: 15%;
+  padding-bottom: 15%;
+
+}
+
+.NombreFalta {
+  color: $colorsexto;
+  font-family: $fuente-secundaria;
+  font-size: 30px;
+  margin-left: 39%;
+  margin-bottom: 2%;
+}
+
+.ContainerFalta {
+  display: grid;
+  grid-template-columns: 12% 1% 14% 1% 19% 1% 14%;
+  gap: 5px;
+  margin-left: 21%;
+}
+
+.numero {
+  display: inline-block;
+  text-align: center;
+  color: $colorsexto;
+}
+
+.linea {
+  width: 1px;
+  height: 34px;
+  background-color: black;
+}
+
+.Info {
+  text-align: center;
+}
+
+.TextoCeremonia {
+  color: #fff;
+  font-size: 26px;
+
+}
+
+.Hr4 {
+  background-color: $colorSecundario;
+  margin-left: 17%;
+  margin-right: 17%;
+}
+
+.Indicacion {
+  color: #fff;
+  margin-top: 6%;
+}
+
+.InfoValor {
+  color: $colorSecundario;
+  margin-top: 4%;
+  font-size: larger;
+
+}
+
+.BtnDatos {
+  color: #fff;
+  border-radius: 18px 18px 18px 18px;
+  font-family: $fuente-secundaria;
+  padding: 10px 16%;
+  margin-top: 4%;
+  background-color: $colorTerciario;
+}
+
+.BtnDatos2 {
+  padding: 10px 10%;
+}
+
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: $colorSecundario;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-body {
+  border: solid $colorTerciario 3px;
+  margin-top: 6%;
+}
+
+.modal-content img {
+  border-radius: 50%;
+  width: 17%;
+  position: absolute;
+  right: 42%;
+  top: 6%;
+  -webkit-box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+.AsistenciaBoda{
+    margin-top: 10%;
+  }
+
+.InfomodalForm{
+  background-color: $colorSecundario;
+  color: $colorTerciario;
+  font-family: $fuente-secundaria;
+  border-color: #d9a491;
+  border-style: none;
+  border-bottom: solid $colorTerciario 1px;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  background: $colorTerciario;
+  padding: 1%;
+  color: #fff;
+  border-radius: 70%;
+  margin-top:11%;
+  margin-right: 5%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.BtnModalEnviar{
+  color: #fff;
+  border-radius: 18px 18px 18px 18px;
+  padding: 7px 7%;
+  margin-bottom: 2%;
+  background-color: $colorsexto;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .TextoUno {
+    font-size: $sizeFuenteUnoMoviles;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 5rem;
+  }
+
+  .Texto-Secundario {
+    font-size: $sizeFuenteUnoMoviles - 1.2;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 3rem;
+  }
+
+  .BtnPrincipal {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    min-width: 100px;
+    height: 30px;
+  }
+
+  .Hr1 {
+    width: 29%;
+    margin-left: 4%;
+  }
+
+  .TextoImagen {
+    left: 36%;
+    font-size: 21px;
+  }
+
+  .Hr2 {
+    width: 30%;
+    margin-left: 66%;
+    margin-top: 9%;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+  .NombresNovio {
+    top: 10%;
+    font-size: 380%;
+    margin-left: 19%;
+
+  }
+
+  .NombresNovia {
+    top: 34%;
+    font-size: 380%;
+    margin-left: 21%;
+  }
+
+  .NombreAnd {
+    top: 27%;
+    font-size: 165%;
+    margin-left: 45%
+  }
+
+  .Hr3 {
+    margin-left: 5%;
+    width: 84%;
+    top: 45%
+  }
+
+  .Leyenda {
+    top: 50%;
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 20px;
+  }
+
+  .BordeImagen {
+    width: 100%;
+  }
+
+  iframe{
+    width: 270px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .TextoUno {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: $sizeTablet;
+    margin-top: 6rem;
+  }
+
+  .Texto-Secundario {
+    margin-left: 3cm;
+    margin-right: 3rem;
+    font-size: $sizeTablet - 2;
+  }
+
+  .BtnPrincipal {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    min-width: 130px;
+    height: 40px;
+  }
+
+  .Imagen {
+    width: 110%;
+  }
+
+  .Hr1 {
+    width: 34%;
+    margin-left: 5%;
+  }
+
+  .TextoImagen {
+    left: 42%;
+    font-size: 42px;
+  }
+
+  .Hr2 {
+    width: 36%;
+    margin-left: 72%;
+    margin-top: 9%;
+  }
+
+  .NombresNovio {
+    top: 8%;
+    font-size: 800%;
+    margin-left: 23%;
+  }
+
+  .NombresNovia {
+    top: 33%;
+    font-size: 800%;
+    margin-left: 26%;
+  }
+
+  .NombreAnd {
+    top: 25%;
+    font-size: 414%;
+    margin-left: 51%
+  }
+
+  .Hr3 {
+    margin-left: 5%;
+    width: 97%;
+    top: 44%;
+  }
+
+  .Leyenda {
+    top: 49%;
+    margin-left: 12%;
+    margin-right: 12%;
+    font-size: 43px;
+  }
+
+  .SeparacionUno {
+    padding-left: 80%;
+    padding-right: 30%;
+  }
+
+  .FranjaFaltan {
+    width: 110%;
+  }
+
+  .NombreFalta {
+    font-size: 59px;
+  }
+
+  .numero {
+    font-size: 34px;
+  }
+
+  .linea {
+    height: 70px;
+  }
+
+  .TextoCeremonia {
+    font-size: 55px;
+  }
+
+  .Indicacion {
+    font-size: 36px;
+  }
+
+  .InfoValor {
+    font-size: 31px;
+  }
+
+  .BtnDatos {
+    padding: 17px 24%;
+    margin-top: 4%;
+    font-size: 29px;
+    border-radius: 30px 30px 30px 30px;
+  }
+
+  .BtnDatos2 {
+    padding: 17px 17%;
+  }
+
+  .close{
+    margin-top: 13%;
+    margin-right: 7%;
+  }
+
+  .AsistenciaBoda{
+    font-size: 38px;
+  }
+
+  .InfomodalForm{
+    font-size: 34px;
+  }
+  .BtnModalEnviar{
+    font-size: 34px;
+  }
+
+}
+
+@media only screen and (min-width : 1025px) {
+  .TextoUno {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    font-size: $sizeFuenteUno;
+    margin-top: 7rem;
+  }
+
+  .Texto-Secundario {
+    margin-left: 3cm;
+    margin-right: 3rem;
+    font-size: $sizeFuenteUno - 3;
+  }
+
+  .BtnPrincipal {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    min-width: 150px;
+    height: 50px;
+  }
+
+  .Imagen {
+    width: 100%;
+  }
+
+  .Hr1 {
+    width: 40%;
+  }
+
+  .Hr2 {
+    width: 38%;
+    margin-left: 59%;
+    margin-top: 7.2%;
+  }
+
+  .TextoImagen {
+    left: 43%;
+    font-size: 50px;
+  }
+
+
+  .NombresNovio {
+    top: 8%;
+    font-size: 1000%;
+    margin-left: 28%;
+
+  }
+
+  .NombresNovia {
+    top: 33%;
+    font-size: 1000%;
+    margin-left: 30%;
+  }
+
+  .NombreAnd {
+    top: 24%;
+    font-size: 680%;
+    margin-left: 46%
+  }
+
+  .Hr3 {
+    margin-left: 5%;
+    width: 86%;
+    top: 43%;
+  }
+
+  .Leyenda {
+    top: 47%;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 67px;
+  }
+
+  .NombreFalta {
+    font-size: 96px;
+  }
+
+  .numero {
+    font-size: 65px;
+  }
+
+  .linea {
+    height: 106px;
+  }
+
+  .TextoCeremonia {
+    font-size: 89px;
+  }
+
+  .Indicacion {
+    font-size: 73px;
+  }
+
+  .InfoValor {
+    font-size: 68px;
+  }
+
+  .BtnDatos {
+    padding: 17px 16%;
+    margin-top: 4%;
+    font-size: 50px;
+    border-radius: 42px 42px 42px 42px;
+  }
+
+  .BtnDatos2 {
+    padding: 17px 6%;
+  }
+
+  .close{
+    margin-top: 13%;
+    margin-right: 8%;
+  }
+
+  .AsistenciaBoda{
+    font-size: 44px;
+  }
+
+  .InfomodalForm{
+    font-size: 40px;
+  }
+  .BtnModalEnviar{
+    font-size: 40px;
+  }
+}
