@@ -1,0 +1,16 @@
+<div class="colorSecundarioFondo FranjaFaltan">
+
+
+<div class="taCenter fs55 letraRetrato fsXL89">Retratos de Nuestro Amor</div>
+<div class="taCenter fsTbl34 mensajeRetrato fsXL65">Un minutio, un segundo, un instante que queda en la eternidad</div>
+<div class="colorTerceroFuente taCenter fs34 fs65 fsXL89 iconRetrato"><fa-icon [icon]="faCoffee"></fa-icon></div>
+
+<div class="carousel">
+  <div class="carousel-inner" [style.transform]="transform">
+    <img *ngFor="let image of images; let i = index" [src]="image.src"   class="imgCardCarru"  alt="Ima{{ i + 1 }}">
+  </div>
+  <button (click)="prev()" class="btn fs50 fsXL89 left-button">&#10094;</button>
+  <button (click)="next()" class="btn fs50 fsXL89 right-button">&#10095;</button>
+</div>
+
+</div>

@@ -26,7 +26,7 @@ export class FaltaComponent {
       .subscribe(() => {
         this.interval = setInterval(() => {
           this.zone.run(() => {
-            const fechaObjetivo: Date = new Date('2025-07-05T17:00:00');
+            const fechaObjetivo: Date = new Date('2025-07-05T14:30:00');
             this.tiempoRestante = this.calcularTiempoRestante(fechaObjetivo);
 
           });
