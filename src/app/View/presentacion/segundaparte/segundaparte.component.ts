@@ -5,11 +5,12 @@ import { FaltaComponent } from '../falta/falta.component';
 import { CeremoniaComponent } from '../ceremonia/ceremonia.component';
 import { CarruselComponent } from "../carrusel/carrusel.component";
 import { TenerEncuentaComponent } from '../tener-encuenta/tener-encuenta.component';
+import { FinalComponent } from '../final/final.component';
 
 @Component({
   selector: 'app-segundaparte',
   standalone: true,
-  imports: [NombresComponent, FaltaComponent, CeremoniaComponent, CarruselComponent, TenerEncuentaComponent],
+  imports: [NombresComponent, FaltaComponent, CeremoniaComponent, CarruselComponent, TenerEncuentaComponent, FinalComponent],
   templateUrl: './segundaparte.component.html',
   styleUrl: './segundaparte.component.scss',
 })

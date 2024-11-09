@@ -5,6 +5,7 @@
 <app-carrusel></app-carrusel>
 <br>
 <app-tener-encuenta (event)="Modal($event)"></app-tener-encuenta>
+<app-final></app-final>
 
 
 <div [style]="{'display': modal ? 'block' : 'none'}" class="modal">
@@ -22,11 +23,13 @@
         </div>
         <br>
         <div>
-          <input class="colorSecundarioFondo colorTerceroFuente  fsTbl34 fsXL44 InfomodalForm" type="text" placeholder="Ingrese nombre completo">
+          <input class="colorSecundarioFondo colorTerceroFuente  fsTbl34 fsXL44 InfomodalForm" type="text"
+            placeholder="Ingrese nombre completo">
         </div>
         <br>
         <div>
-          <textarea class="colorSecundarioFondo colorTerceroFuente fsTbl34 fsXL44 InfomodalForm"> Ingrese algun comentario</textarea>
+          <textarea
+            class="colorSecundarioFondo colorTerceroFuente fsTbl34 fsXL44 InfomodalForm"> Ingrese algun comentario</textarea>
         </div>
         <br>
         <button class="fsTbl34 fsXL44 BtnModalEnviar">Enviar</button>
@@ -35,11 +38,19 @@
 
       <div [style]="{'display': seccion===3 ? 'block' : 'none'}">
         <h2>Ubicacion</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.83047695894!2d-74.32024829999999!3d4.6016133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f739879a69be7%3A0xacc0490c2cca43!2sChicaque%2C%20San%20Antonio%20Del%20Tequendama%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1730756343136!5m2!1ses-419!2sco"
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.83047695894!2d-74.32024829999999!3d4.6016133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f739879a69be7%3A0xacc0490c2cca43!2sChicaque%2C%20San%20Antonio%20Del%20Tequendama%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1730756343136!5m2!1ses-419!2sco"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade" title="mapalugar"></iframe>
       </div>
-<br>
+
+      <div [style]="{'display': seccion===4 ? 'block' : 'none'}">
+
+
+
+      </div>
+
+      <br>
     </div>
   </div>
 </div>

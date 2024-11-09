@@ -283,7 +283,7 @@ body {
 }
 
 .iconRetrato {
-  margin-top: 9px;
+  margin-top: 9%;
 }
 
 .carousel {
@@ -334,7 +334,7 @@ body {
 .card {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 4%;
+  margin-top: 14%;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -346,6 +346,24 @@ body {
 .mensajeMusica {
   margin-top: 10%;
   margin-left: 5%;
+}
+
+.marginfinal{
+  margin-top: 25%;
+}
+
+.bordeCardFinal{
+  border: $colorTerciario solid 3px;
+}
+
+.paddingFinal{
+  padding: 3%;
+}
+
+.cardFinal {
+  margin-top: 14%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
@@ -440,7 +458,8 @@ body {
   }
 
   .carousel img {
-    width: 400px;
+    width: 84%;
+    margin-left: 7%;
   }
 
   .IndicacionDos {
@@ -576,7 +595,8 @@ body {
   }
 
   .carousel img {
-    width: 850px;
+    width: 886px;
+    margin-left: 11%;
   }
 
   .card {
@@ -611,7 +631,7 @@ body {
   }
 
   .fsXL89{
-    font-size: 89px;
+    font-size: 95px;
   }
 
   .fsXL65{
@@ -696,7 +716,8 @@ body {
   }
 
   .carousel img {
-    width: 1000px;
+    width: 886px;
+    margin-left: 11%;
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faMusic, faShirt, faClipboardList, faImages } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-tener-encuenta',
   standalone: true,
@@ -10,6 +10,9 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons';
 })
 export class TenerEncuentaComponent {
   faMusic = faMusic
+  fashirt = faShirt
+  faClipBoard = faClipboardList
+  faImages = faImages
   @Output() event = new EventEmitter<{ valor: boolean, seccionH: number }>();
 
   Modal(valor: boolean, seccionH:number){
