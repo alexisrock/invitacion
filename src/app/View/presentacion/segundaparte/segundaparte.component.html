@@ -15,6 +15,17 @@
     <img [src]="imgAnillos" alt="Ícono de anillos">
     <div class="modal-body">
 
+
+      <!-- Guardar fecha-->
+      <div [style]="{'display': seccion===1 ? 'block' : 'none'}">
+        <h2>Guardar fecha</h2>
+
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=BodaMilayGus&dates=05-07-2024/05-07-2024&details=boda&location=chicaque&sf=true&trp=false">Agregar Evento</a>
+      </div>
+
+
+
+      <!-- Asistencia al eventor -->
       <div class="fsTbl34 fsXL44 AsistenciaBoda" [style]="{'display': seccion===2 ? 'block' : 'none'}">
         <h2>¿Asites a la ceremonia?</h2>
         <div class="options">
@@ -36,6 +47,7 @@
         <br>
       </div>
 
+      <!-- Como llegar -->
       <div [style]="{'display': seccion===3 ? 'block' : 'none'}">
         <h2>Ubicacion</h2>
         <iframe
@@ -44,11 +56,57 @@
           referrerpolicy="no-referrer-when-downgrade" title="mapalugar"></iframe>
       </div>
 
-      <div [style]="{'display': seccion===4 ? 'block' : 'none'}">
+      <!-- sugerir cancion -->
+      <div class="fsTbl34 fsXL44 AsistenciaBoda" [style]="{'display': seccion===4 ? 'block' : 'none'}">
+        <h2>Sugerir canción</h2>
+        <input class="colorSecundarioFondo colorTerceroFuente  fsTbl34 fsXL44 InfomodalForm" type="text"
+          placeholder="Tu nombre">
+        <div>
+          <input class="colorSecundarioFondo colorTerceroFuente  fsTbl34 fsXL44 InfomodalForm" type="text"
+            placeholder="Nombre de la cancion y autor">
+        </div>
+        <div>
+          <input class="colorSecundarioFondo colorTerceroFuente  fsTbl34 fsXL44 InfomodalForm" type="text"
+            placeholder="Url de youtube, spotify, etc.">
+
+        </div>
+        <br>
+        <button class="fsTbl34 fsXL44 BtnModalEnviar">Sugerir canción</button>
+        <br>
+      </div>
+
+
+      <!-- Dress Code -->
+      <div class="fsTbl34 fsXL44 AsistenciaBoda" [style]="{'display': seccion===5 ? 'block' : 'none'}">
+        <h2>Dress code</h2>
+        <p> Vestimenta formal</p>
+        <p>Outfir ideas</p>
+
+
+      </div>
+
+
+      <!-- Trae tu foto-->
+      <div class="fsTbl34 fsXL44 AsistenciaBoda" [style]="{'display': seccion===6 ? 'block' : 'none'}">
+        <h2>Trae tu foto</h2>
+        <p> Trae una foto de algun momento que compartimos</p>
+        <p>Ideas de ejemplo</p>
 
 
 
       </div>
+
+
+      <!-- Trae tu foto-->
+      <div class="fsTbl34 fsXL44 AsistenciaBoda" [style]="{'display': seccion===7 ? 'block' : 'none'}">
+        <h2>Tips y Notas</h2>
+        <p> Información adicional para tener en cuenta</p>
+
+
+
+
+      </div>
+
 
       <br>
     </div>
