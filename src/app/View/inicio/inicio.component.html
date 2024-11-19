@@ -1,20 +1,22 @@
 
+<div class="image-container">
+  <img [src]="imgFlores"  loading="lazy" class="imgFloresArriba" alt="esta es  la  dos" />
+  <img [src]="imgSobre" loading="lazy" class="imagenS" alt="esta es  la  uno" />
 
-<div class="colorTerceroFuente  taCenter  mlMobile TextoUno">
-  Bienvenidos a la invitacion de Mila y Gus
+  <div class="NombresDos colorTerceroFuente  taCenter   TextoUno">
+    Bienvenidos a la invitacion de Mila y Gus
+  </div>
+
+<br>
+
+  <div class="taCenter  Texto-Secundario">
+    la musica de fondo es parte de la experiencia
+  </div>
+
+  <button class=" BtnPrincipal" (click)="siguientepagina()"> Abrir </button>
+
+
+  <img [src]="imgFlores"  class="imgflorAbajo" loading="lazy"  alt="esta es  la  dos" />
+
+  <audio allow="autoplay" #audioElement></audio>
 </div>
-
-
-
-<div class="taCenter mlMobile Texto-Secundario">
-  la musica de fondo es parte de la experiencia
-</div>
-
-<div class="Container">
-  <button class=" BtnPrincipal mlMobile" (click)="siguientepagina()"> Ingresar </button>
-</div>
-
-
-
-<audio allow="autoplay" #audioElement></audio>
-

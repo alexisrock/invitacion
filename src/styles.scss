@@ -1,19 +1,24 @@
-$colorPrincipal: #14243b;
+$colorPrincipal: #8e9b83;
 $colorSecundario: #f2c6c2;
 $colorTerciario: #8a675c;
 $colorCuarto: #9b8d7b;
 $colorQuinto: #092d29;
 $colorsexto: #8c3f4d;
 $fuente-secundaria: Josefin Sans;
-$sizeFuenteUno: 5rem;
-$sizeTablet: 4rem;
-$sizeFuenteUnoMoviles: 2rem;
+$sizeFuenteUno:  2133%;
+$sizeTablet:  397%;
+$sizeFuenteUnoMoviles: 215%;
 
 
 body {
   background-color: $colorPrincipal;
 }
 
+.imagenS{
+  width: 100%;
+  background-color: transparent;
+  margin-top: 20%;
+}
 
 .colorSecundarioFondo {
   background-color: $colorSecundario;
@@ -49,6 +54,9 @@ body {
   color: $colorCuarto;
 }
 
+
+
+
 .Container {
   display: flex;
   justify-content: center;
@@ -64,7 +72,7 @@ body {
   position: relative;
   display: inline-block;
   outline: none;
-  border-radius: 20px;
+  border-radius: 7px 7px 7px 7px;
   border: 2px solid $colorSecundario;
   background: $colorTerciario;
 }
@@ -78,11 +86,6 @@ body {
   position: relative;
 }
 
-.image-container img {
-  display: block;
-  mix-blend-mode: luminosity;
-  z-index: -1;
-}
 
 .Hr1 {
   size: 10px;
@@ -367,25 +370,43 @@ body {
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
-  .TextoUno {
-    font-size: $sizeFuenteUnoMoviles;
-    margin-top: 5rem;
+
+  .imgFloresArriba{
+    transform: rotate(180deg);
+    position: absolute;
+    height: 38%;
   }
 
-  .mlMobile {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+  .TextoUno {
+    font-size: $sizeFuenteUnoMoviles;
+    top: 19%;
+    margin-left: 16%;
+    margin-right: 16%;
   }
 
   .Texto-Secundario {
-    font-size: $sizeFuenteUnoMoviles - 1.2;
-    margin-top: 3rem;
+    position: absolute;
+    font-size: $sizeFuenteUnoMoviles - 110.6;
+    top: 44%;
+    margin-left: 16%;
+    margin-right: 17%;
   }
 
   .BtnPrincipal {
-    font-size: 0.7rem;
+    position: absolute;
+    top: 72%;
+    margin-left: 37%;
+    margin-right: 39%;
+    font-size: 1.4rem;
     min-width: 100px;
-    height: 30px;
+    height: 40px;
+  }
+
+
+  .imgflorAbajo{
+    width: 100%;
+    position: absolute;
+    top: 83%;
   }
 
   .Hr1 {
@@ -413,6 +434,7 @@ body {
     font-size: 380%;
     margin-left: 19%;
   }
+
 
   .NombresNovia {
     top: 34%;
@@ -470,25 +492,43 @@ body {
 }
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+
+  .imgFloresArriba{
+    transform: rotate(180deg);
+    position: absolute;
+    height: 50%;
+  }
+
   .TextoUno {
-    margin-left: 2rem;
-    margin-right: 2rem;
     font-size: $sizeTablet;
-    margin-top: 6rem;
+    top: 28%;
+    margin-left: 16%;
+    margin-right: 16%;
   }
 
   .Texto-Secundario {
-    margin-left: 3cm;
-    margin-right: 3rem;
-    font-size: $sizeTablet - 2;
+    font-size: $sizeTablet - 147;
+    top: 49%;
+    position: absolute;
+    margin-left: 16%;
+    margin-right: 17%;
   }
 
   .BtnPrincipal {
-    font-size: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    min-width: 130px;
-    height: 40px;
+    position: absolute;
+    top: 72%;
+    font-size: 2rem;
+    margin-left: 38%;
+    margin-right: 39%;
+    min-width: 21%;
+    height: 7%;
+  }
+
+  .imgflorAbajo{
+    width: 100%;
+    position: absolute;
+    top: 83%;
   }
 
   .fs55{
@@ -609,25 +649,43 @@ body {
 }
 
 @media only screen and (min-width : 1025px) {
+
+
+  .imgFloresArriba{
+    transform: rotate(180deg);
+    position: absolute;
+    height: 55%;
+  }
+
   .TextoUno {
-    margin-left: 6rem;
-    margin-right: 6rem;
     font-size: $sizeFuenteUno;
-    margin-top: 7rem;
+    top: 26%;
+    margin-left: 16%;
+    margin-right: 16%;
   }
 
   .Texto-Secundario {
-    margin-left: 3cm;
-    margin-right: 3rem;
-    font-size: $sizeFuenteUno - 3;
+     font-size: $sizeFuenteUno - 852;
+     position: absolute;
+     top: 53%;
+     margin-left: 18%;
+     margin-right: 17%;
   }
 
   .BtnPrincipal {
-    font-size: 1.3rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    min-width: 150px;
-    height: 50px;
+    position: absolute;
+    font-size: $sizeFuenteUno - 2;
+    top: 71%;
+    margin-left: 37%;
+    margin-right: 39%;
+    min-width: 26%;
+    height: 9%;
+  }
+
+  .imgflorAbajo{
+    width: 100%;
+    position: absolute;
+    top: 82%;
   }
 
   .fsXL89{

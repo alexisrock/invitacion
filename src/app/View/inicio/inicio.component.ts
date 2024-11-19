@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import * as appSettings from '../../../../public/appsettings.json';
 
 @Component({
   selector: 'app-inicio',
@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
   styleUrl: './inicio.component.scss'
 })
 export class InicioComponent {
+  imgSobre: string= appSettings.imgSobre;
+  imgFlores: string= appSettings.imgFlores;
+
   audio = new Audio();
   isPlaying = false;
   currentTime = 0;
