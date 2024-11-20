@@ -8,6 +8,6 @@ import * as appSettings from '../../../../../public/appsettings.json';
   styleUrl: './nombres.component.scss'
 })
 export class NombresComponent {
-  fecha: string = '05.07.2025';
+  fecha: string = '05/07/2025';
   imgNovios: string= appSettings.imgNovios;
 }
