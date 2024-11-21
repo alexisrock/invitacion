@@ -1,6 +1,6 @@
 import { ApplicationRef, Component, inject, NgZone } from '@angular/core';
 import { first } from 'rxjs';
-
+import * as appSettings from '../../../../../public/appsettings.json';
 @Component({
   selector: 'app-falta',
   standalone: true,
@@ -9,6 +9,7 @@ import { first } from 'rxjs';
   styleUrl: './falta.component.scss',
 })
 export class FaltaComponent {
+  imgFloresSepacion: string= appSettings.imgFloresSepacion;
   timeLeft: any;
   tiempoRestante!: {
     dias: number| undefined;

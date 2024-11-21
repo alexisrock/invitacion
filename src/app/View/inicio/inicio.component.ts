@@ -29,7 +29,7 @@ export class InicioComponent {
 
   iniciarSonido(){
     this.audio = new Audio('/audio.mp3');
-    this.audio.play();
+    // this.audio.play();
   }
 
   siguientepagina(){

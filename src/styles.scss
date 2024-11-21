@@ -5,8 +5,8 @@ $colorCuarto: #9b8d7b;
 $colorQuinto: #092d29;
 $colorsexto: #8c3f4d;
 $fuente-secundaria: Josefin Sans;
-$sizeFuenteUno:  747%;
-$sizeTablet:  397%;
+$sizeFuenteUno: 9vw;
+$sizeTablet: 397%;
 $sizeFuenteUnoMoviles: 215%;
 
 
@@ -14,7 +14,12 @@ body {
   background-color: $colorPrincipal;
 }
 
-.imagenS{
+.imgFloresArriba {
+  transform: rotate(180deg);
+  position: absolute;
+}
+
+.imagenS {
   width: 100%;
   background-color: transparent;
   margin-top: 20%;
@@ -54,9 +59,6 @@ body {
   color: $colorCuarto;
 }
 
-
-
-
 .Container {
   display: flex;
   justify-content: center;
@@ -85,7 +87,6 @@ body {
 .image-container {
   position: relative;
 }
-
 
 .Hr1 {
   size: 10px;
@@ -127,15 +128,30 @@ body {
 }
 
 .SeparacionUno {
-  background-color: $colorTerciario;
+  background-color: $colorsexto;
   padding-top: 1%;
   padding-bottom: 1%;
 }
 
 .FranjaFaltan {
+  position: relative;
+  top: -3vw;
+}
 
-  padding-top: 15%;
-  padding-bottom: 15%;
+.imgFloresSeparcion {
+  position: relative;
+  top: -16vw;
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.imgFloresSeparciondos {
+  position: relative;
+  top: 12vw;
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
 
 }
 
@@ -352,15 +368,15 @@ body {
   margin-left: 5%;
 }
 
-.marginfinal{
+.marginfinal {
   margin-top: 25%;
 }
 
-.bordeCardFinal{
+.bordeCardFinal {
   border: $colorTerciario solid 3px;
 }
 
-.paddingFinal{
+.paddingFinal {
   padding: 3%;
 }
 
@@ -372,9 +388,7 @@ body {
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 
-  .imgFloresArriba{
-    transform: rotate(180deg);
-    position: absolute;
+  .imgFloresArriba {
     height: 38%;
   }
 
@@ -404,7 +418,7 @@ body {
   }
 
 
-  .imgflorAbajo{
+  .imgflorAbajo {
     width: 100%;
     position: absolute;
     top: 83%;
@@ -471,6 +485,14 @@ body {
     width: 100%;
   }
 
+  .imgFloresSeparcion {
+    left: 20vw;
+  }
+
+  .imgFloresSeparciondos{
+    left: 20vw;
+  }
+
   iframe {
     width: 270px;
     height: 300px;
@@ -499,10 +521,7 @@ body {
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
-
-  .imgFloresArriba{
-    transform: rotate(180deg);
-    position: absolute;
+  .imgFloresArriba {
     height: 50%;
   }
 
@@ -531,25 +550,25 @@ body {
     height: 7%;
   }
 
-  .imgflorAbajo{
+  .imgflorAbajo {
     width: 100%;
     position: absolute;
     top: 83%;
   }
 
-  .fs55{
+  .fs55 {
     font-size: 55px;
   }
 
-  .fs50{
+  .fs50 {
     font-size: 50px;
   }
 
-  .fsTbl34{
+  .fsTbl34 {
     font-size: 40px;
   }
 
-  .fsTbl31{
+  .fsTbl31 {
     font-size: 31px;
   }
 
@@ -575,6 +594,14 @@ body {
     margin-left: 68%;
     margin-top: 12%;
     border: solid 3px white;
+  }
+
+  .imgFloresSeparcion {
+    left: 27vw;
+  }
+
+  .imgFloresSeparciondos{
+    left: 27vw;
   }
 
   .NombresNovio {
@@ -661,10 +688,7 @@ body {
 
 @media only screen and (min-width : 1025px) {
 
-
-  .imgFloresArriba{
-    transform: rotate(180deg);
-    position: absolute;
+  .imgFloresArriba {
     height: 55%;
   }
 
@@ -676,16 +700,16 @@ body {
   }
 
   .Texto-Secundario {
-     font-size: $sizeFuenteUno - 400;
-     position: absolute;
-     top: 53%;
-     margin-left: 18%;
-     margin-right: 17%;
+    font-size: $sizeFuenteUno - 4;
+    position: absolute;
+    top: 53%;
+    margin-left: 18%;
+    margin-right: 17%;
   }
 
   .BtnPrincipal {
     position: absolute;
-    font-size: $sizeFuenteUno - 200;
+    font-size: $sizeFuenteUno - 3;
     top: 71%;
     margin-left: 37%;
     margin-right: 39%;
@@ -693,21 +717,21 @@ body {
     height: 9%;
   }
 
-  .imgflorAbajo{
+  .imgflorAbajo {
     width: 100%;
     position: absolute;
     top: 82%;
   }
 
-  .fsXL89{
-    font-size: 95px;
+  .fsXL89 {
+    font-size: $sizeFuenteUno - 1;
   }
 
-  .fsXL65{
-    font-size: 65px;
+  .fsXL65 {
+    font-size: $sizeFuenteUno - 4;
   }
 
-  .fsXL44{
+  .fsXL44 {
     font-size: 44px;
   }
 
@@ -716,39 +740,39 @@ body {
   }
 
   .Hr1 {
-    width: 37%;
-    border: solid 3px white;
+    width: 31vw;
+    border: solid 0.5vw white;
     top: 6%;
     margin-left: 3%;
   }
 
   .Hr2 {
-    width: 30%;
-    margin-left: 66%;
+    width: 24vw;
+    margin-left: 71vw;
     top: 6%;
-    border: solid 3px white;
+    border: solid 0.5vw white;
   }
 
   .TextoImagen {
-    left: 43%;
-    font-size: 50px;
+    left: 37vw;
+    font-size: $sizeFuenteUno - 3;
   }
 
   .NombresNovio {
     top: 16%;
-    font-size: 1000%;
+    font-size: $sizeFuenteUno + 6;
     margin-left: 26%;
   }
 
   .NombresNovia {
     top: 46%;
-    font-size: 1000%;
+    font-size: $sizeFuenteUno + 6;
     margin-left: 28%;
   }
 
   .NombreAnd {
     top: 34%;
-    font-size: 680%;
+    font-size: $sizeFuenteUno + 3;
     margin-left: 46%
   }
 
@@ -756,13 +780,22 @@ body {
     margin-left: 5%;
     width: 86%;
     top: 87%;
-    border: solid 3px white;
+    border: solid 0.5vw white;
   }
 
   .Leyenda {
     top: 70%;
     margin-left: 11%;
     margin-right: 13%;
+    font-size: $sizeFuenteUno - 4;
+  }
+
+  .imgFloresSeparcion {
+    left: 24vw;
+  }
+
+  .imgFloresSeparciondos{
+    left: 24vw;
   }
 
   .linea {
