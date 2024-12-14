@@ -15,6 +15,7 @@ $colorTerciario: #8C3F40;
 $colorCuarto: #b05a2d;
 $colorQuinto: #f2c6c2;
 $colorsexto: #8c3f4d;
+$colorseptimo: #8A675C;
 $fuente-primaria: 'catchy-mager', sans-serif;
 $fuente-secundaria: 'Glacial-Indifference', sans-serif;
 $sizeFuenteUno: 8vw;
@@ -41,17 +42,13 @@ body {
 }
 
 .colorTerceroFuente {
-  color: $colorTerciario;
+  color: $colorseptimo;
 }
 
 .colorPrincipalFuente {
-  color: $colorPrincipal;
-}
-
-
-
-.fs34 {
-  font-size: 34px;
+  color: $colorSecundario;
+  font-family: $fuente-primaria;
+  font-size: 10vw;
 }
 
 .taCenter {
@@ -251,41 +248,53 @@ body {
 
 .modal-body {
   border: solid $colorTerciario 3px;
-  margin-top: 6%;
+  border-radius: 8vw 8vw 8vw 8vw;
 }
 
-.modal-content img {
-  border-radius: 50%;
-  width: 17%;
+.imgFlor {
+  width: 23vw;
   position: absolute;
-  right: 42%;
-  top: 6%;
-  -webkit-box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: -8px 7px 5px -4px rgba(0, 0, 0, 0.75);
+  right: 34vw;
+  top: 7vw;
+}
+
+.imgDressCode{
+  height: 135vw;
+  margin-left: 3vw;
 }
 
 .AsistenciaBoda {
   margin-top: 10%;
 }
 
+.imgBodyModal{
+
+  width: 35vw;
+}
+
+.ml-2{
+  margin-left: 2vw;
+}
+
 .InfomodalForm {
   font-family: $fuente-secundaria;
   border-color: #d9a491;
   border-style: none;
-  border-bottom: solid $colorTerciario 1px;
+  border-radius: 7vw 7vw 7vw 7vw;
+  margin-top: 4vw;
+  border: solid $colorTerciario 2px;
 }
 
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 13vw;
   font-weight: bold;
   background: $colorTerciario;
-  padding: 1%;
+  padding: 1vw 4vw;
   color: #fff;
   border-radius: 70%;
-  margin-top: 11%;
-  margin-right: 5%;
+  margin-top: 8vw;
+
 }
 
 .close:hover,
@@ -302,26 +311,36 @@ body {
 
 .BtnModalEnviar {
   color: #fff;
-  border-radius: 18px 18px 18px 18px;
+  border-radius: 10vw 10vw 10vw 10vw;
   padding: 7px 7%;
   margin-bottom: 2%;
   background-color: $colorsexto;
 }
 
 .letraRetrato {
-  color: $colorQuinto;
-  font-size: 26px;
+  color: $colorTerciario;
+  font-size: 7vw;
+  font-family: $fuente-secundaria;
+
 }
 
 .mensajeRetrato {
-  color: $colorQuinto;
-  font-size: 18px;
+  color: $colorTerciario;
+  font-size: 5vw;
   margin-top: 9px;
+  font-family: $fuente-secundaria;
 }
 
 .iconRetrato {
   margin-top: 9%;
+  width: 20vw;
 }
+
+.iconFinal{
+  width: 40vw;
+  margin-top: 2vw;
+}
+
 
 .carousel {
   margin-top: 3%;
@@ -334,10 +353,18 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
+
 .imgCardCarru {
   padding: 1%;
   margin-left: 3%;
   background-color: #fff;
+
+}
+
+.imgCardCarruOK{
+    height: 27vw;
+    top: 98vw;
+    margin-left: 3vw;
 }
 
 .btn {
@@ -351,16 +378,16 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 7vw;
   transition: background-color 0.3s ease;
 }
 
 .btn.left-button {
-  left: 8px;
+  left: 5vw;
 }
 
 .btn.right-button {
-  right: 8px;
+  right: 5vw;
 }
 
 .btn:hover {
@@ -372,7 +399,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 14%;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8vw 8vw 8vw 8vw;
 }
 
 .iconMusic {
@@ -381,9 +408,25 @@ body {
 }
 
 .mensajeMusica {
-  margin-top: 10%;
-  margin-left: 5%;
+  margin-top:6vw;
+  margin-left: 2vw;
+  font-family: $fuente-secundaria;
+  font-size: 5vw;
 }
+
+
+.carouselDC {
+  margin-top: 3%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-innerDC {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
 
 .marginfinal {
   margin-top: 25%;
@@ -401,6 +444,28 @@ body {
   margin-top: 14%;
   margin-left: 10%;
   margin-right: 10%;
+  border-radius: 5vw 5vw 5vw 5vw;
+}
+
+.letrafinal{
+  font-size: 4vw;
+}
+
+.sizedibujo{
+ width: 40vw;
+}
+
+.dibujos{
+  position: relative;
+ top: -29vw;
+}
+
+.gus{
+  left: -10vw;
+}
+
+.mila{
+  left: 12vw;
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
@@ -463,6 +528,7 @@ body {
 
   .image-container img {
     width: 100%;
+
   }
 
   .NombresNovio {
@@ -502,11 +568,11 @@ body {
   }
 
   .imgFloresSeparcion {
-    left: 20vw;
+    left: 23vw;
   }
 
   .imgFloresSeparciondos {
-    left: 20vw;
+    left: 23vw;
   }
 
   .NombreFalta {
@@ -529,6 +595,9 @@ body {
     font-size: $sizeFuenteUnoMoviles - 2;
   }
 
+  .InfomodalForm{
+    font-size: $sizeFuenteUnoMoviles - 3;
+  }
 
   iframe {
     width: 270px;
@@ -545,8 +614,9 @@ body {
   }
 
   .carousel img {
-    width: 84%;
+    width: 85vw;
     margin-left: 7%;
+    height: 85vw;
   }
 
   .IndicacionDos {
@@ -593,17 +663,6 @@ body {
     top: 83%;
   }
 
-
-
-  .fs50 {
-    font-size: 50px;
-  }
-
-
-  .fsTbl31 {
-    font-size: 31px;
-  }
-
   .Imagen {
     width: 110%;
   }
@@ -629,11 +688,11 @@ body {
   }
 
   .imgFloresSeparcion {
-    left: 27vw;
+    left: 24vw;
   }
 
   .imgFloresSeparciondos {
-    left: 27vw;
+    left: 24vw;
   }
 
   .NombresNovio {
@@ -683,7 +742,6 @@ body {
     margin-bottom: 2%;
   }
 
-
   .ContainerFalta{
     margin-left: 8vw;
     gap: 3vw;
@@ -698,7 +756,6 @@ body {
     font-size: $sizeTablet - 1;
   }
 
-
   .Indicacion {
     font-size: $sizeTablet  - 3;
   }
@@ -710,18 +767,33 @@ body {
   .BtnDatos {
     padding: 17px 24%;
     margin-top: 4%;
-    font-size: $sizeTablet  - 3;
+    margin-bottom: 3vw;
+    font-size: $sizeTablet  - 4;
     border-radius: 30px 30px 30px 30px;
   }
 
+  .imgFlor {
+    top: -6vw;
+    right: 41vw;
+  }
+
+  .InfomodalForm{
+    font-size: $sizeTablet - 3;
+  }
+
+  .btnasistencia{
+    font-size: $sizeTablet - 3;
+  }
 
   .BtnDatos2 {
     padding: 17px 17%;
   }
 
   .close {
-    margin-top: 13%;
-    margin-right: 7%;
+    margin-top: 1vw;
+    margin-right: 4vw;
+    font-size: 10vw;
+
   }
 
   .iconRetrato {
@@ -733,15 +805,20 @@ body {
   }
 
   .carousel img {
-    width: 886px;
-    margin-left: 11%;
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .imgDressCode{
+    height: 140vw;
+    margin-left: 6vw;
   }
 
   .card {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 4%;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 5vw 5vw 5vw 5vw;
   }
 
 }
@@ -783,13 +860,6 @@ body {
     width: 100%;
     position: absolute;
     top: 82%;
-  }
-
-
-
-
-  .fsXL44 {
-    font-size: 44px;
   }
 
   .Imagen {
@@ -849,6 +919,11 @@ body {
     font-size: $sizeFuenteUno - 3;
   }
 
+  .imgFlor {
+    top: 3vw;
+    right: 38vw;
+  }
+
   .imgFloresSeparcion {
     left: 24vw;
   }
@@ -877,6 +952,13 @@ body {
     font-size: $sizeFuenteUno - 1;
   }
 
+  .InfomodalForm{
+    font-size: $sizeFuenteUno - 3;
+  }
+
+  .btnasistencia{
+    font-size: $sizeFuenteUno - 3;
+  }
 
   .Indicacion {
     font-size: $sizeFuenteUno  - 3;
@@ -889,8 +971,9 @@ body {
   .BtnDatos {
     padding: 17px 16%;
     margin-top: 4%;
+    margin-bottom: 4vw;
     font-size: $sizeFuenteUno  - 3;
-    border-radius: 42px 42px 42px 42px;
+    border-radius: 60vw 60vw 60vw 60vw;
   }
 
   .BtnDatos2 {
@@ -898,13 +981,20 @@ body {
   }
 
   .close {
-    margin-top: 13%;
-    margin-right: 8%;
+    margin-top: 7vw;
+    margin-right: 2vw;
+    font-size: 10vw;
+
+  }
+
+  .imgDressCode{
+    height: 140vw;
+    margin-left: -1vw;
   }
 
   .carousel img {
-    width: 886px;
-    margin-left: 11%;
+    width: 90vw;
+    height: 90vw;
   }
 
 }

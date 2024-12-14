@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as appSettings from '../../../../../public/appsettings.json';
 
 @Component({
   selector: 'app-final',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './final.component.scss'
 })
 export class FinalComponent {
-
+  imgMilagus: string =appSettings.imgMilaGus;
+  imgGus: string =appSettings.imgGus;
+  imgMila: string =appSettings.imgMila;
 }

@@ -1,18 +1,15 @@
 <div class="taCenter">
-  <div class="fs55 TextoCeremonia fsXL89 marginfinal">Fiesta</div>
-  <div class="Indicacion fsTbl31 IndicacionDos fsXL65">Hagamos junto s una fiesta épica. Aqui algunos detalles a tener
-    en cuenta</div>
+  <div class="TextoCeremonia marginfinal">Fiesta</div>
+  <div class="Indicacion IndicacionDos">¡Hagamos juntos una fiesta épica!</div>
 
 
   <div class="card colorSecundarioFondo">
     <br />
     <br />
-    <div class="colorPrincipalFuente fs30 fs50 fsXL89">Musica </div>
-    <br>
-    <div class="colorTerceroFuente taCenter fs34 fs65 iconRetrato fsXL89"><fa-icon [icon]="faMusic"></fa-icon></div>
+    <div class="colorPrincipalFuente">Música </div>
+    <div class=" taCenter "><img [src]="imgMusic"  class="iconRetrato" loading="lazy"  alt="camara"> </div>
 
-    <div class="colorTerceroFuente mensajeMusica fsTbl31 fsXL65">¿Cuál es la canción que no debe faltar en la PlayList
-      de la fiesta?
+    <div class="colorTerceroFuente mensajeMusica">¿Cuál es la canción que no debefaltar en la playlist de nuestra boda?
     </div>
     <button class="BtnDatos" (click)="Modal(true, 4)">SUGERIR CANCIÓN</button>
     <br />
@@ -25,11 +22,9 @@
   <div class="card colorSecundarioFondo">
     <br />
     <br />
-    <div class="colorPrincipalFuente fs30 fs50 fsXL89">Dress Code</div>
-    <br>
-    <div class="colorTerceroFuente taCenter fs34 fs65 iconRetrato fsXL89"><fa-icon [icon]="fashirt"></fa-icon></div>
-
-    <div class="colorTerceroFuente mensajeMusica fsTbl31 fsXL65">Una orientación para tu vestuario
+    <div class="colorPrincipalFuente">Dress Code</div>
+    <div class=" taCenter "><img [src]="imgDressCode"  class="iconRetrato"  loading="lazy" alt="camara"> </div>
+    <div class="colorTerceroFuente mensajeMusica">Una orientación para tu vestuario
     </div>
     <button class="BtnDatos" (click)="Modal(true, 5)">VER MAS</button>
     <br />
@@ -41,11 +36,9 @@
   <div class="card colorSecundarioFondo">
     <br />
     <br />
-    <div class="colorPrincipalFuente fs30 fs50 fsXL89">Trae tu foto</div>
-    <br>
-    <div class="colorTerceroFuente taCenter fs34 fs65 iconRetrato fsXL89"><fa-icon [icon]="faImages"></fa-icon></div>
-
-    <div class="colorTerceroFuente mensajeMusica fsTbl31 fsXL65">Trae una foto de algun momento que compartimos
+    <div class="colorPrincipalFuente">Trae tu foto</div>
+    <div class=" taCenter "><img [src]="imgTuFoto"  class="iconRetrato" loading="lazy"  alt="camara"> </div>
+    <div class="colorTerceroFuente mensajeMusica ">Trae una foto de algun momento que compartimos
     </div>
     <button class="BtnDatos" (click)="Modal(true, 6)">VER MAS</button>
     <br />
@@ -58,11 +51,11 @@
   <div class="card colorSecundarioFondo">
     <br />
     <br />
-    <div class="colorPrincipalFuente fs30 fs50 fsXL89">Tips y Notas</div>
-    <br>
-    <div class="colorTerceroFuente taCenter fs34 fs65 iconRetrato fsXL89"><fa-icon [icon]="faClipBoard"></fa-icon></div>
+    <div class="colorPrincipalFuente">Tips y Notas</div>
+    <div class=" taCenter "><img [src]="imgTipYNotas"  class="iconRetrato" loading="lazy"  alt="camara"> </div>
 
-    <div class="colorTerceroFuente mensajeMusica fsTbl31 fsXL65">Información adicional para tener en cuenta.
+
+    <div class="colorTerceroFuente mensajeMusica ">Información adicional para tener en cuenta.
     </div>
     <button class="BtnDatos" (click)="Modal(true, 7)">VER MAS</button>
     <br />
