@@ -12,7 +12,7 @@ import * as appSettings from '../../../../public/appsettings.json';
 export class InicioComponent {
   imgSobre: string= appSettings.imgSobre;
   imgFlores: string= appSettings.imgFlores;
-
+  imgCorazon: string= appSettings.imgCorazon;
   audio = new Audio();
   isPlaying = false;
   currentTime = 0;

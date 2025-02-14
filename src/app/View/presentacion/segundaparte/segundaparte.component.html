@@ -91,12 +91,22 @@
         <div class="colorPrincipalFuente">Dress Code</div>
 
         <div class="carouselDC">
-          <div class="carousel-innerDC" [style.transform]="transform"  >
+          <div class="carousel-innerDC" [style.transform]="transform">
             <div *ngFor="let image of images; let i = index">
-              <img [src]="image.src"  loading="lazy" class="imgDressCode" alt="Imadc{{ i + 1 }}">
-              <br>
-              <img  [style]="{'display': i + 1 !== 5  ? 'block' : 'none' }"    [src]="imgttfok" loading="lazy"  class="imgCardCarruOK"  alt="Imgoknot">
-              <img  [style]="{'display': i + 1 === 5  ? 'block' : 'none' }"    [src]="imgttfnot" loading="lazy"  class="imgCardCarruOK"  alt="Imgnot">
+
+              <div class="imgOKOrNot">
+                <img [style]="{'display': i + 1 !== 6 && i + 1 != 1 ? 'block' : 'none' }" [src]="imgttfok"
+                  loading="lazy" class="imgCardCarruOK" alt="Imgoknot">
+                <img [style]="{'display': i + 1 === 6 && i + 1 != 1  ? 'block' : 'none' }" [src]="imgttfnot"
+                  loading="lazy" class="imgCardCarruOK" alt="Imgnot">
+              </div>
+
+
+              <h2 [style]="{'display': i + 1 == 1  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
+              <div>
+                <img [src]="image.src" loading="lazy" class="imgDressCode" alt="Imadc{{ i + 1 }}">
+              </div>
+
             </div>
           </div>
           <button (click)="prev()" class="btn left-button">&#10094;&#10094;</button>

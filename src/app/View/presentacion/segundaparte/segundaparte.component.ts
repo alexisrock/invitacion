@@ -24,6 +24,7 @@ export class SegundaparteComponent {
   imgAnillos: string=appSettings.imgAnillos
   transform = 'translateX(0)';
   images: Image[] = [
+    { src: appSettings.imgDC6 },
     { src: appSettings.imgDC1 },
     { src: appSettings.imgDC2 },
     { src: appSettings.imgDC3 },

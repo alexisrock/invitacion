@@ -27,14 +27,17 @@ body {
 }
 
 .imgFloresArriba {
-  transform: rotate(180deg);
+  position: absolute;
+}
+
+.imgCorazon{
   position: absolute;
 }
 
 .imagenS {
   width: 100%;
   background-color: transparent;
-  margin-top: 20%;
+  margin-top: 43vw;
 }
 
 .colorSecundarioFondo {
@@ -74,17 +77,11 @@ body {
   margin-top: 4rem;
 }
 
-.BtnPrincipal {
+.Texto-Tres{
   color: #fff;
-  padding: 5px 10px;
   font-size: $fuente-primaria;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
-  outline: none;
-  border-radius: 7px 7px 7px 7px;
-  border: 2px solid $colorQuinto;
-  background: $colorCuarto;
+  position: absolute;
+
 }
 
 .BtnPrincipal:hover {
@@ -249,6 +246,7 @@ body {
 .modal-body {
   border: solid $colorTerciario 3px;
   border-radius: 8vw 8vw 8vw 8vw;
+  padding-top: 3vw;
 }
 
 .imgFlor {
@@ -260,7 +258,7 @@ body {
 
 .imgDressCode{
   height: 135vw;
-  margin-left: 3vw;
+  padding-left: 5vw;
 }
 
 .AsistenciaBoda {
@@ -280,7 +278,7 @@ body {
   font-family: $fuente-secundaria;
   border-color: #d9a491;
   border-style: none;
-  border-radius: 7vw 7vw 7vw 7vw;
+  border-radius: 2vw 2vw 2vw 2vw;
   margin-top: 4vw;
   border: solid $colorTerciario 2px;
 }
@@ -363,8 +361,6 @@ body {
 
 .imgCardCarruOK{
     height: 27vw;
-    top: 98vw;
-    margin-left: 3vw;
 }
 
 .btn {
@@ -428,6 +424,7 @@ body {
 
 
 
+
 .marginfinal {
   margin-top: 25%;
 }
@@ -470,31 +467,59 @@ body {
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 
-  .imgFloresArriba {
-    height: 41vw;
+  .imagenS {
+    margin-top: 43vw;
   }
+
+  .imgFloresArriba {
+    height: 50vw;
+    width: 50vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+
+  .imgCorazon{
+    height: 30vw;
+    width: 35vw;
+    left: 33vw;
+    top: 102vw;
+  }
+
 
   .TextoUno {
     font-size: $sizeFuenteUnoMoviles;
-    top: 17.5%;
-    margin-left: 16%;
-    margin-right: 16%;
+    top: 50vw;
+    padding-left: 39vw;
+    padding-right: 39vw;
   }
 
   .Texto-Secundario {
     position: absolute;
     font-size: $sizeFuenteUnoMoviles - 4;
-    top: 52vw;
+    top: 55vw;
     margin-left: 19vw;
     margin-right: 19vw;
   }
 
+  .Texto-Terciario{
+    font-size: 1.4rem;
+    position: absolute;
+    top: 108vw;
+    left: 43vw;
+  }
+
+  .Texto-TerciarioDos{
+    font-size: 1.4rem;
+    position: absolute;
+    top: 115vw;
+    left: 46vw;
+  }
   .BtnPrincipal {
     position: absolute;
     top: 72%;
     margin-left: 37%;
     margin-right: 39%;
-    font-size: 1.4rem;
+
     min-width: 100px;
     height: 11vw;
   }
@@ -624,43 +649,61 @@ body {
     margin-right: 3%;
   }
 
+  .imgOKOrNot{
+    padding-right: 23vw;
+    padding-left: 23vw;
+  }
+
 }
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
+  .imagenS {
+    margin-top: 39vw;
+  }
+
   .imgFloresArriba {
-    height: 50%;
+    height: 45vw;
+    width: 45vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
   }
 
   .TextoUno {
     font-size: $sizeTablet;
-    top: 29vw;
-    margin-left: 20vw;
-    margin-right: 23vw;
+    top: 51vw;
+    padding-left: 39vw;
+    padding-right: 39vw;
   }
 
   .Texto-Secundario {
     font-size: $sizeTablet - 3;
     position: absolute;
-    top: 67vw;
+    top: 60vw;
     margin-left: 20vw;
     margin-right: 23vw;
   }
 
-  .BtnPrincipal {
-    position: absolute;
-    top: 72%;
-    font-size: 2rem;
-    margin-left: 38%;
-    margin-right: 39%;
-    min-width: 21%;
-    height: 7%;
+
+  .imgCorazon{
+    height: 30vw;
+    width: 34vw;
+    left: 32vw;
+    top: 97vw;
   }
 
-  .imgflorAbajo {
-    width: 100%;
+  .Texto-Terciario{
+    font-size: 3.7rem;
     position: absolute;
-    top: 83%;
+    top: 102vw;
+    left: 39vw;
+  }
+
+  .Texto-TerciarioDos{
+    font-size: 3.7rem;
+    position: absolute;
+    top: 110vw;
+    left: 43vw;
   }
 
   .Imagen {
@@ -801,7 +844,7 @@ body {
   }
 
   .carousel {
-    width: 800px;
+    width: 96vw;
   }
 
   .carousel img {
@@ -810,8 +853,9 @@ body {
   }
 
   .imgDressCode{
-    height: 140vw;
-    margin-left: 6vw;
+    height: 130vw;
+    padding-left: 10vw;
+    padding-right: 3vw;
   }
 
   .card {
@@ -821,40 +865,68 @@ body {
     border-radius: 5vw 5vw 5vw 5vw;
   }
 
+
+  .imgOKOrNot{
+    padding-right: 27vw;
+    padding-left: 26vw;
+  }
+
 }
 
 @media only screen and (min-width : 1025px) {
 
+
+  .imagenS {
+    margin-top: 39vw;
+  }
+
+
+
   .imgFloresArriba {
-    height: 55%;
+    height: 45vw;
+    width: 45vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
   }
 
   .TextoUno {
     font-size: $sizeFuenteUno;
-    top: 26%;
-    margin-left: 24vw;
-    margin-right: 23vw;
+    top: 52vw;
+    padding-left: 39vw;
+    padding-right: 39vw;
   }
 
   .Texto-Secundario {
     font-size: $sizeFuenteUno - 3;
     position: absolute;
-    top: 67vw;
+    top: 61vw;
     margin-left: 21vw;
     margin-right: 21vw;
   }
 
-  .BtnPrincipal {
-    position: absolute;
-    font-size: $sizeFuenteUno - 3;
-    top: 71%;
-    margin-left: 37%;
-    margin-right: 39%;
-    min-width: 26%;
-    height: 9%;
-    border-radius: 40px 40px 40px 40px;
-    border: 37px solid $colorQuinto;
+
+  .imgCorazon{
+    height: 30vw;
+    width: 34vw;
+    left: 32vw;
+    top: 97vw;
   }
+
+  .Texto-Terciario{
+    font-size: $sizeFuenteUno - 3;
+    position: absolute;
+    top: 104vw;
+    left: 42vw;
+  }
+
+  .Texto-TerciarioDos{
+    font-size: $sizeFuenteUno - 3;
+    position: absolute;
+    top: 110vw;
+    left: 45vw;
+  }
+
+
 
   .imgflorAbajo {
     width: 100%;
@@ -989,12 +1061,24 @@ body {
 
   .imgDressCode{
     height: 140vw;
-    margin-left: -1vw;
+    padding-left: 0vw;
   }
 
   .carousel img {
-    width: 90vw;
-    height: 90vw;
+    width: 93vw;
+    height: 93vw;
+  }
+
+  .imgOKOrNot{
+    padding-right: 29vw;
+    padding-left: 26vw;
+  }
+
+  .imgCardCarruOK {
+    height: 19vw;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 
 }

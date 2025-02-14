@@ -26,7 +26,6 @@ export class CarruselComponent {
     { src: appSettings.imgCarrucel9 },
     { src: appSettings.imgCarrucel10 },
     { src: appSettings.imgCarrucel11 },
-    { src: appSettings.imgCarrucel12 },
     { src: appSettings.imgCarrucel13 },
     { src: appSettings.imgCarrucel14 },
     { src: appSettings.imgCarrucel15 },
@@ -38,7 +37,8 @@ export class CarruselComponent {
     { src: appSettings.imgCarrucel21 },
     { src: appSettings.imgCarrucel22 },
     { src: appSettings.imgCarrucel23 },
-    { src: appSettings.imgCarrucel24 }
+    { src: appSettings.imgCarrucel24 },
+    { src: appSettings.imgCarrucel12 }
 
 
   ];

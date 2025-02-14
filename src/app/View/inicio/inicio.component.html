@@ -1,22 +1,37 @@
 
-<div class="image-container">
-  <img [src]="imgFlores"  loading="lazy" class="imgFloresArriba" alt="esta es  la  dos" />
+<div class="">
+  <img [src]="imgFlores"  loading="lazy" class="imgFloresArriba" alt="esta es  la  dos"  />
   <img [src]="imgSobre" loading="lazy" class="imagenS" alt="esta es  la  uno" />
 
   <div class=" colorTerceroFuente  taCenter   TextoUno">
-    Bienvenidos a la invitacion de Mila y Gus
+    ¡Hola!
   </div>
 
 <br>
 
   <div class="taCenter  Texto-Secundario">
-    la musica de fondo es parte de la experiencia
+    ¡Sí! Nos casamos y queremos que nosacompañes a celebrar elamor en nuestro día
+  </div>
+  <div class="taCenter " (click)="siguientepagina()" >
+    <img [src]="imgCorazon" loading="lazy" class="imgCorazon" alt="esta es  la  dos" >
+
+    <div class="taCenter Texto-Tres Texto-Terciario">
+      Ingresa
+    </div>
+    <div class="taCenter  Texto-Tres Texto-TerciarioDos">
+      aquí
+    </div>
+
   </div>
 
-  <button class=" BtnPrincipal" (click)="siguientepagina()"> Abrir </button>
 
 
-  <img [src]="imgFlores"  class="imgflorAbajo" loading="lazy"  alt="esta es  la  dos" />
+
+
+
+
+
+
 
   <audio allow="autoplay" #audioElement></audio>
 </div>
