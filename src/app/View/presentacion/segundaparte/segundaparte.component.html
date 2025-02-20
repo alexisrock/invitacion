@@ -32,27 +32,37 @@
         <button class="BtnModalEnviar btnasistencia">¿QUIÉN ASISTIRÁ?</button>
         <br>
         <br>
-        <div>
-          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" type="text"
-            placeholder="Ingrese nombre completo">
+        <div *ngFor="let invitado of listInvitados; let i = index">
+
+          <div>
+            <div>
+             <input type="text" class="colorSecundarioFondo colorTerceroFuente InfomodalForm" [value]="invitado.nombre"   readonly>
+            </div>
+           <div>
+            <label class="colorSecundarioFondo colorTerceroFuente">
+              Confirmado:
+              <input type="checkbox" (ngModel)="invitado.confirmado" [checked]="invitado.confirmado === true" disabled>
+            </label>
+           </div>
+           <div>
+            <label class="colorSecundarioFondo colorTerceroFuente">
+              Asistencia:
+              <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === true" (change)="invitado.asistencia = true; addInvitadosCA(invitado.id, true)"> Yes
+              <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === false" (change)="invitado.asistencia = false; addInvitadosCA(invitado.id, false)"> No
+            </label>
+           </div>
+
+          </div>
+
         </div>
-        <div>
-          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" type="text"
-            placeholder="Ingrese nombre completo">
-        </div>
-        <div>
-          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" type="text"
-            placeholder="Ingrese nombre completo">
-        </div>
-        <div>
-          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" type="text"
-            placeholder="Ingrese nombre completo">
-        </div>
+
+
+
         <br>
         <br>
 
 
-        <button class="BtnModalEnviar btnasistencia">Enviar</button>
+        <button class="BtnModalEnviar btnasistencia" (click)="sendConfirm()">Enviar</button>
         <br>
       </div>
 

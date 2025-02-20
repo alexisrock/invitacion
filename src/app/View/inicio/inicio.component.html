@@ -1,7 +1,7 @@
 
 <div class="">
   <img [src]="imgFlores"  loading="lazy" class="imgFloresArriba" alt="esta es  la  dos"  />
-  <img [src]="imgSobre" loading="lazy" class="imagenS" alt="esta es  la  uno" />
+  <img [src]="imgSobre"  class="imagenS" alt="esta es  la  uno" />
 
   <div class=" colorTerceroFuente  taCenter   TextoUno">
     ¡Hola!
@@ -12,8 +12,20 @@
   <div class="taCenter  Texto-Secundario">
     ¡Sí! Nos casamos y queremos que nosacompañes a celebrar elamor en nuestro día
   </div>
+
+  <div>
+
+      <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm inputInicio" type="text"
+      placeholder="Ingrese su código" [(ngModel)]="codigo" >
+
+
+  </div>
   <div class="taCenter " (click)="siguientepagina()" >
-    <img [src]="imgCorazon" loading="lazy" class="imgCorazon" alt="esta es  la  dos" >
+    <img [src]="imgCorazon" loading="lazy" class="imgCorazon" alt="esta es btn del corazon" >
+    <div class="error">
+      <p *ngIf="error== true"> {{message}}.</p>
+
+    </div>
 
     <div class="taCenter Texto-Tres Texto-Terciario">
       Ingresa
@@ -24,6 +36,22 @@
 
   </div>
 
+  @if(loading$ | async) {
+
+    <div class="spinner-container">
+      @if(customLoadingIndicator) {
+
+      <ng-container
+        *ngTemplateOutlet="customLoadingIndicator" />
+
+      } @else {
+
+        <img [src]="imgLoading" class="imgloadding" height="250" width="250" alt="loadding">
+
+      }
+    </div>
+
+    }
 
 
 

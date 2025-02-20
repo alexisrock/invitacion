@@ -26,6 +26,11 @@ body {
   background-color: $colorPrincipal;
 }
 
+label{
+  font-family: $fuente-secundaria;
+  font-size: 5vw;
+}
+
 .imgFloresArriba {
   position: absolute;
 }
@@ -38,6 +43,45 @@ body {
   width: 100%;
   background-color: transparent;
   margin-top: 43vw;
+}
+
+
+.spinner-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.676);
+  z-index: 2000;
+}
+
+
+.imgloadding{
+  position: absolute;
+  top: 63vw;
+  left: 20vw;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  border-radius: 97vw;
+}
+
+.inputInicio{
+  position: absolute;
+}
+
+.error{
+  color: #8c3f4d;
+  background-color: #d9a491;
+  font-family: $fuente-primaria;
+  font-size: 5vw;
+  position: absolute;
+  top: 2vw;
+  left: 26vw;
+  width: 59vw;
 }
 
 .colorSecundarioFondo {
@@ -481,8 +525,8 @@ body {
   .imgCorazon{
     height: 30vw;
     width: 35vw;
-    left: 33vw;
-    top: 102vw;
+    left: 30vw;
+    top: 110vw;
   }
 
 
@@ -504,26 +548,23 @@ body {
   .Texto-Terciario{
     font-size: 1.4rem;
     position: absolute;
-    top: 108vw;
-    left: 43vw;
+    top: 117vw;
+    left: 39vw;
   }
 
   .Texto-TerciarioDos{
     font-size: 1.4rem;
     position: absolute;
-    top: 115vw;
-    left: 46vw;
-  }
-  .BtnPrincipal {
-    position: absolute;
-    top: 72%;
-    margin-left: 37%;
-    margin-right: 39%;
-
-    min-width: 100px;
-    height: 11vw;
+    top: 124vw;
+    left: 43vw;
   }
 
+
+  .inputInicio{
+      top: 96vw;
+      left: 19vw;
+
+  }
 
   .imgflorAbajo {
     width: 100%;
@@ -621,7 +662,7 @@ body {
   }
 
   .InfomodalForm{
-    font-size: $sizeFuenteUnoMoviles - 3;
+    font-size: $sizeFuenteUnoMoviles - 4;
   }
 
   iframe {
@@ -669,6 +710,10 @@ body {
     padding-right: 25vw;
   }
 
+  .imgloadding{
+    left: 34vw;
+  }
+
   .TextoUno {
     font-size: $sizeTablet;
     top: 51vw;
@@ -686,25 +731,31 @@ body {
 
 
   .imgCorazon{
-    height: 30vw;
-    width: 34vw;
-    left: 32vw;
-    top: 97vw;
+    height: 25vw;
+    width: 30vw;
+    left: 35vw;
+    top: 105vw;
   }
 
   .Texto-Terciario{
-    font-size: 3.7rem;
+    font-size: 3rem;
     position: absolute;
-    top: 102vw;
-    left: 39vw;
+    top: 109vw;
+    left: 41vw;
   }
 
   .Texto-TerciarioDos{
-    font-size: 3.7rem;
+    font-size: 3rem;
     position: absolute;
-    top: 110vw;
-    left: 43vw;
+    top: 114vw;
+    left: 45vw;
   }
+
+  .inputInicio{
+    top: 95vw;
+    left: 24vw;
+
+}
 
   .Imagen {
     width: 110%;
@@ -906,27 +957,38 @@ body {
 
 
   .imgCorazon{
-    height: 30vw;
-    width: 34vw;
+    height: 25vw;
+    width: 30vw;
     left: 32vw;
-    top: 97vw;
+    top: 105vw;
   }
+
+  .imgloadding{
+    left: 38vw;
+  }
+
 
   .Texto-Terciario{
     font-size: $sizeFuenteUno - 3;
     position: absolute;
-    top: 104vw;
-    left: 42vw;
+    top: 110vw;
+    left: 40vw;
+
   }
 
   .Texto-TerciarioDos{
     font-size: $sizeFuenteUno - 3;
     position: absolute;
-    top: 110vw;
-    left: 45vw;
+    top: 115vw;
+    left: 43vw;
   }
 
 
+  .inputInicio{
+    top: 95vw;
+    left: 24vw;
+
+}
 
   .imgflorAbajo {
     width: 100%;

@@ -73,7 +73,9 @@
             },
             "development": {
               "buildTarget": "TarjetaBoda:build:development"
-            }
+            },"options": {
+                "proxyConfig": "proxy.conf.json"
+              }
           },
           "defaultConfiguration": "development"
         },

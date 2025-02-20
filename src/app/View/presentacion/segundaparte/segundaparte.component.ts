@@ -8,6 +8,10 @@ import { CarruselComponent } from "../carrusel/carrusel.component";
 import { TenerEncuentaComponent } from '../tener-encuenta/tener-encuenta.component';
 import { FinalComponent } from '../final/final.component';
 import { NgFor } from '@angular/common';
+import { BackendServiceService } from '../../../Service/backend-service.service';
+import { Subscription } from 'rxjs';
+import { Invitado } from '../../../Model/LoginResponse';
+import { ConfirmAssistanceRequest, InvitadoCA } from '../../../Model/ConfirmAssistanceRequest';
 
 @Component({
   selector: 'app-segundaparte',
@@ -37,9 +41,19 @@ export class SegundaparteComponent {
   imgttf4: string=appSettings.imgttf4;
   imgttfok: string=appSettings.imgttfok;
   imgttfnot: string=appSettings.imgttfnot;
-
   currentIndex = 0;
-  constructor() {
+  listInvitados: Invitado[] = [];
+
+  listRequest: InvitadoCA[] = [];
+
+  private loginResponseServiceSubscription: Subscription | undefined;
+
+
+
+  constructor(private service: BackendServiceService) {
+    this.loginResponseServiceSubscription = service.currentLogin.subscribe( currentLogin => {
+       this.listInvitados = currentLogin.invitados;
+    })
   }
 
   ngOnDestroy() {
@@ -54,7 +68,6 @@ export class SegundaparteComponent {
   }
 
   ModalSegunda(valor: boolean, seccionH: number){
-
     this.Modal({valor, seccionH});
   }
   next() {
@@ -66,6 +79,38 @@ export class SegundaparteComponent {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     this.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
+
+  addInvitadosCA( invitadoId: number, asistencia: boolean ){
+    let request = {} as InvitadoCA;
+    request.id = invitadoId;
+    request.asistencia = asistencia === true ? 1 : 0;
+    request.confirmado = 1;
+    this.listRequest.push(request)
+  }
+
+  sendConfirm(){
+
+    if (this.listRequest.length!==0) {
+
+      let request = {} as ConfirmAssistanceRequest;
+      request.invitados = this.listRequest;
+      this.service.confirmAsisitencia(request)
+      .subscribe({
+        next: (value) => {
+          this.Modal({valor: false, seccionH: 0});
+        },error(err) {
+
+
+        }})
+
+    }
+
+
+  }
+
+
+
+
 
 
 }
