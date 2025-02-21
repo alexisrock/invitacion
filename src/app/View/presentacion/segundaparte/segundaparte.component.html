@@ -18,13 +18,16 @@
 
       <!-- Guardar fecha-->
       <div [style]="{'display': seccion===1 ? 'block' : 'none'}">
-        <h2>Guardar fecha</h2>
-
-        <a
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=BodaMilayGus&dates=05-07-2024/05-07-2024&details=boda&location=chicaque&sf=true&trp=false">Agregar
-          Evento</a>
+        <br>
+        <br>
+        <button class="BtnModalEnviar btnasistencia ">GUARDAR FECHA</button>
+        <br>
+        <br>
+        <a href="https://calendar.app.google/2UhbNx9Mg1cMZFKF7" class="txtCalendario">Agregar
+          evento a tu calendario</a>
+        <br>
+        <br>
       </div>
-
 
 
       <!-- Asistencia al eventor -->
@@ -36,31 +39,36 @@
 
           <div>
             <div>
-             <input type="text" class="colorSecundarioFondo colorTerceroFuente InfomodalForm" [value]="invitado.nombre"   readonly>
+              <label for="" class="colorTerceroFuente"><u>{{invitado.nombre}}</u></label>
             </div>
-           <div>
-            <label class="colorSecundarioFondo colorTerceroFuente">
-              Confirmado:
-              <input type="checkbox" (ngModel)="invitado.confirmado" [checked]="invitado.confirmado === true" disabled>
-            </label>
-           </div>
-           <div>
-            <label class="colorSecundarioFondo colorTerceroFuente">
-              Asistencia:
-              <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === true" (change)="invitado.asistencia = true; addInvitadosCA(invitado.id, true)"> Yes
-              <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === false" (change)="invitado.asistencia = false; addInvitadosCA(invitado.id, false)"> No
-            </label>
-           </div>
+            <div>
+              <label class="colorSecundarioFondo colorTerceroFuenteRojo">
+                Confirmado:
+                <input type="checkbox" (ngModel)="invitado.confirmado" [checked]="invitado.confirmado === true"
+                  disabled>
+              </label>
+            </div>
+            <div>
+              <label class="colorSecundarioFondo colorTerceroFuenteRojo">
+                Asistencia:
+                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === true"
+                  (change)="invitado.asistencia = true; addInvitadosCA(invitado.id, true)"> Yes
+                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === false"
+                  (change)="invitado.asistencia = false; addInvitadosCA(invitado.id, false)"> No
+              </label>
+            </div>
 
           </div>
-
+          <br>
         </div>
 
-
-
+        <br>
+        <div class="taCenter">
+          <label class="colorTerceroFuenteRojo">IMPORTANTE</label><br>
+          <label class="colorTerceroFuente">Los niños se quedan en casa</label>
+        </div>
         <br>
         <br>
-
 
         <button class="BtnModalEnviar btnasistencia" (click)="sendConfirm()">Enviar</button>
         <br>
@@ -68,25 +76,30 @@
 
       <!-- Como llegar -->
       <div [style]="{'display': seccion===3 ? 'block' : 'none'}">
-        <h2>Ubicacion</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.83047695894!2d-74.32024829999999!3d4.6016133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f739879a69be7%3A0xacc0490c2cca43!2sChicaque%2C%20San%20Antonio%20Del%20Tequendama%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1730756343136!5m2!1ses-419!2sco"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" title="mapalugar"></iframe>
+        <br>
+        <br>
+        <button class="BtnModalEnviar btnasistencia ">UBICACIÒN</button>
+        <br>
+        <br>
+        <a href="https://www.chicaque.com/como-llegar-a-chicaque" class="txtCalendario">Agregar
+          evento a tu calendario</a>
+        <br>
+        <br>
       </div>
 
       <!-- sugerir cancion -->
       <div class="AsistenciaBoda" [style]="{'display': seccion===4 ? 'block' : 'none'}">
-        <p class="colorTerceroFuente mensajeMusica">Comparte con nosotros el enlace de la canción que crees que no puede
+        <p class="colorTerceroFuenteRojo mensajeMusica">Comparte con nosotros el enlace de la canción que crees que no
+          puede
           faltar en nuestra boda y en qué momento debería
           sonar.</p>
-        <p class="colorTerceroFuente mensajeMusica">Elige bien, puedes recomendar solo una.</p>
+        <p class="colorTerceroFuenteRojo mensajeMusica">Elige bien, puedes recomendar solo una.</p>
 
         <div>
           <input class="colorSecundarioFondo colorTerceroFuente  InfomodalForm" type="text" placeholder="www.">
         </div>
         <div>
-          <input class="colorSecundarioFondo colorTerceroFuente   InfomodalForm" type="text" placeholder="nombre">
+          <input class="colorSecundarioFondo colorTerceroFuente   InfomodalForm" type="text" placeholder="momento">
 
         </div>
         <br>
@@ -105,16 +118,31 @@
             <div *ngFor="let image of images; let i = index">
 
               <div class="imgOKOrNot">
-                <img [style]="{'display': i + 1 !== 6 && i + 1 != 1 ? 'block' : 'none' }" [src]="imgttfok"
+                <img [style]="{'display': i + 1 !== 7 && i + 1 != 1 && i + 1 != 2? 'block' : 'none' }" [src]="imgttfok"
                   loading="lazy" class="imgCardCarruOK" alt="Imgoknot">
-                <img [style]="{'display': i + 1 === 6 && i + 1 != 1  ? 'block' : 'none' }" [src]="imgttfnot"
+                <img [style]="{'display': i + 1 == 7 && i + 1 != 1 && i + 1 != 2 ? 'block' : 'none' }" [src]="imgttfnot"
                   loading="lazy" class="imgCardCarruOK" alt="Imgnot">
               </div>
 
 
-              <h2 [style]="{'display': i + 1 == 1  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
+
               <div>
-                <img [src]="image.src" loading="lazy" class="imgDressCode" alt="Imadc{{ i + 1 }}">
+                <h2 [style]="{'display': i + 1 == 1  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
+                <img [src]="image.src"[style]="{'display': i + 1 == 1  ? 'block' : 'none' }" loading="lazy" class="imgDressCode" alt="Imadc{{ i + 1 }}">
+              </div>
+
+              <div     >
+                <h2 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
+                <h3 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">¡IMPORTANTE !</h3>
+                <h3 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">Nos reservamos los siguientes colores:</h3>
+                <img [src]="image.src" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }" [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
+              </div>
+
+              <div>
+                <img [src]="image.src" [style]="{'display': i + 1 !== 7 && i + 1 != 1 && i + 1 != 2? 'block' : 'none' }"  [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
+              </div>
+              <div>
+                <img [src]="image.src" [style]="{'display': i + 1 == 7 && i + 1 != 1 && i + 1 != 2? 'block' : 'none' }"  [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
               </div>
 
             </div>
@@ -129,7 +157,8 @@
       <!-- Trae tu foto-->
       <div class="AsistenciaBoda" [style]="{'display': seccion===6 ? 'block' : 'none'}">
 
-        <p class="mensajeMusica">Trae impresa en papel fotográfico una foto que tengas con o de alguno de
+        <p class="mensajeMusica colorTerceroFuenteRojo">Trae impresa en papel fotográfico una foto que tengas con o de
+          alguno de
           nosotros, una foto de nosotros o una imagen que te haga pensar en nosotros,
           escríbenos un mensaje al respaldo.</p>
 
@@ -137,7 +166,7 @@
           <img [src]="imgttf2" class="imgBodyModal" alt="trae tu foto uno">
           <img [src]="imgttf1" class="imgBodyModal ml-2" alt="trae tu foto dos">
         </div>
-        <p class="mensajeMusica">Harán parde de un espacio como este:</p>
+        <p class="mensajeMusica colorTerceroFuenteRojo">Harán parte de un espacio como este:</p>
         <div class="carouselDC">
           <img [src]="imgttf3" class="imgBodyModal" alt="trae tu foto uno">
           <img [src]="imgttf4" class="imgBodyModal ml-2" alt="trae tu foto dos">

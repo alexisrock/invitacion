@@ -5,6 +5,7 @@ import { LoginResponse } from '../Model/LoginResponse';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ConfirmAssistanceRequest } from '../Model/ConfirmAssistanceRequest';
 import { ConfirmAssistanceResponse } from '../Model/ConfirmAssistanceResponse';
+import { StorageService } from './storage-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,10 @@ import { ConfirmAssistanceResponse } from '../Model/ConfirmAssistanceResponse';
 export class BackendServiceService {
 
 
-  urlBase: string = "http://9.169.177.198/";
+  urlBase: string = "https://9.169.177.198/";
 
 
-  constructor(private readonly httpclient: HttpClient) { }
+  constructor(private readonly httpclient: HttpClient, private storageService: StorageService) { }
 
 
   public  headers: HttpHeaders = new HttpHeaders({
@@ -25,17 +26,20 @@ export class BackendServiceService {
   },);
 
 
-  private currentLoginResponseSubject: BehaviorSubject<LoginResponse> = new BehaviorSubject({} as LoginResponse);
-  public readonly currentLogin: Observable<LoginResponse> = this.currentLoginResponseSubject.asObservable();
 
   private loadingSubject =  new BehaviorSubject<boolean>(false);
   loading$ = this.loadingSubject.asObservable();
 
 
   setCurrentLoginResponse(currentLoginResponse: LoginResponse){
-
-    this.currentLoginResponseSubject.next(currentLoginResponse);
+    this.storageService.setLocal('loginRequest',currentLoginResponse )
   }
+
+  getLoginResponse(){
+    const response = this.storageService.getLocal<LoginResponse>('loginRequest');
+    return response;
+  }
+
 
   loadingOn() {
     this.loadingSubject.next(true);

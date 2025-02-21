@@ -29,12 +29,22 @@ export class SegundaparteComponent {
   transform = 'translateX(0)';
   images: Image[] = [
     { src: appSettings.imgDC6 },
-    { src: appSettings.imgDC1 },
-    { src: appSettings.imgDC2 },
-    { src: appSettings.imgDC3 },
+    { src: appSettings.imgDC7 },
     { src: appSettings.imgDC4 },
+    { src: appSettings.imgDC2 },
+    { src: appSettings.imgDC1 },
+    { src: appSettings.imgDC3 },
     { src: appSettings.imgDC5 }
+
+
+
+
+
+
+
+
   ];
+
   imgttf1: string=appSettings.imgttf1;
   imgttf2: string=appSettings.imgttf2;
   imgttf3: string=appSettings.imgttf3;
@@ -42,18 +52,18 @@ export class SegundaparteComponent {
   imgttfok: string=appSettings.imgttfok;
   imgttfnot: string=appSettings.imgttfnot;
   currentIndex = 0;
-  listInvitados: Invitado[] = [];
+  listInvitados?: Invitado[] = [];
 
   listRequest: InvitadoCA[] = [];
 
-  private loginResponseServiceSubscription: Subscription | undefined;
+
 
 
 
   constructor(private service: BackendServiceService) {
-    this.loginResponseServiceSubscription = service.currentLogin.subscribe( currentLogin => {
-       this.listInvitados = currentLogin.invitados;
-    })
+        let response = this.service.getLoginResponse();
+       this.listInvitados = response?.invitados;
+
   }
 
   ngOnDestroy() {

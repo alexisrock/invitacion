@@ -15,18 +15,21 @@ $colorTerciario: #8C3F40;
 $colorCuarto: #b05a2d;
 $colorQuinto: #f2c6c2;
 $colorsexto: #8c3f4d;
+/* este es el color rojo principal*/
 $colorseptimo: #8A675C;
+/* este es el color cafe principal*/
 $fuente-primaria: 'catchy-mager', sans-serif;
 $fuente-secundaria: 'Glacial-Indifference', sans-serif;
+$fuente-botones: 'monserrat', sans-serif;
 $sizeFuenteUno: 8vw;
 $sizeTablet: 8vw;
-$sizeFuenteUnoMoviles: 9vw;
+$sizeFuenteUnoMoviles: 8.5vw;
 
 body {
   background-color: $colorPrincipal;
 }
 
-label{
+label {
   font-family: $fuente-secundaria;
   font-size: 5vw;
 }
@@ -35,7 +38,7 @@ label{
   position: absolute;
 }
 
-.imgCorazon{
+.imgCorazon {
   position: absolute;
 }
 
@@ -60,7 +63,7 @@ label{
 }
 
 
-.imgloadding{
+.imgloadding {
   position: absolute;
   top: 63vw;
   left: 20vw;
@@ -69,11 +72,11 @@ label{
   border-radius: 97vw;
 }
 
-.inputInicio{
+.inputInicio {
   position: absolute;
 }
 
-.error{
+.error {
   color: #8c3f4d;
   background-color: #d9a491;
   font-family: $fuente-primaria;
@@ -90,6 +93,10 @@ label{
 
 .colorTerceroFuente {
   color: $colorseptimo;
+}
+
+.colorTerceroFuenteRojo {
+  color: $colorsexto;
 }
 
 .colorPrincipalFuente {
@@ -115,13 +122,23 @@ label{
   color: $colorTerciario;
 }
 
+.Texto-Terciario {
+  color: $colorQuinto;
+  font-family: $fuente-primaria;
+}
+
+.Texto-TerciarioDos {
+  color: $colorQuinto;
+  font-family: $fuente-primaria;
+}
+
 .Container {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
 
-.Texto-Tres{
+.Texto-Tres {
   color: #fff;
   font-size: $fuente-primaria;
   position: absolute;
@@ -228,7 +245,7 @@ label{
   padding: 3vw 3vw 3vw 3vw;
 }
 
-.mr{
+.mr {
   margin-top: 13vw;
 }
 
@@ -259,10 +276,10 @@ label{
 .BtnDatos {
   color: #fff;
   border-radius: 18px 18px 18px 18px;
-  font-family: $fuente-secundaria;
+  font-family: $fuente-botones;
   padding: 10px 16%;
   margin-top: 4%;
-  background-color: $colorTerciario;
+  background-color: $colorseptimo;
 }
 
 .BtnDatos2 {
@@ -282,44 +299,55 @@ label{
 
 .modal-content {
   margin: 15% auto;
-  padding: 20px;
+  padding: 1px;
   border: 1px solid #888;
-  width: 80%;
+  width: 75%;
 }
 
 .modal-body {
-  border: solid $colorTerciario 3px;
+  border: solid $colorTerciario 1vw;
   border-radius: 8vw 8vw 8vw 8vw;
-  padding-top: 3vw;
+  padding-top: 6vw;
 }
 
 .imgFlor {
   width: 23vw;
   position: absolute;
-  right: 34vw;
+  right: 40vw;
   top: 7vw;
 }
 
-.imgDressCode{
-  height: 135vw;
-  padding-left: 5vw;
+.imgDressCode {
+  height: 122vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
+
+.imgDressCodeDos {
+  height: 54vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+
+
 
 .AsistenciaBoda {
   margin-top: 10%;
 }
 
-.imgBodyModal{
+.imgBodyModal {
 
   width: 35vw;
 }
 
-.ml-2{
+.ml-2 {
   margin-left: 2vw;
 }
 
 .InfomodalForm {
   font-family: $fuente-secundaria;
+  background-color: #fff;
   border-color: #d9a491;
   border-style: none;
   border-radius: 2vw 2vw 2vw 2vw;
@@ -332,10 +360,11 @@ label{
   font-size: 13vw;
   font-weight: bold;
   background: $colorTerciario;
-  padding: 1vw 4vw;
+  padding: 0vw 3vw;
   color: #fff;
   border-radius: 70%;
-  margin-top: 8vw;
+  margin-top: 10vw;
+  margin-right: 11vw;
 
 }
 
@@ -351,12 +380,18 @@ label{
   justify-content: space-around;
 }
 
+.txtCalendario {
+  font-family: $fuente-secundaria;
+  color: $colorseptimo;
+}
+
 .BtnModalEnviar {
   color: #fff;
+  font-family: $fuente-botones;
   border-radius: 10vw 10vw 10vw 10vw;
   padding: 7px 7%;
   margin-bottom: 2%;
-  background-color: $colorsexto;
+  background-color: $colorseptimo;
 }
 
 .letraRetrato {
@@ -367,7 +402,7 @@ label{
 }
 
 .mensajeRetrato {
-  color: $colorTerciario;
+  color: $colorseptimo;
   font-size: 5vw;
   margin-top: 9px;
   font-family: $fuente-secundaria;
@@ -378,7 +413,7 @@ label{
   width: 20vw;
 }
 
-.iconFinal{
+.iconFinal {
   width: 40vw;
   margin-top: 2vw;
 }
@@ -403,8 +438,8 @@ label{
 
 }
 
-.imgCardCarruOK{
-    height: 27vw;
+.imgCardCarruOK {
+  height: 27vw;
 }
 
 .btn {
@@ -448,10 +483,11 @@ label{
 }
 
 .mensajeMusica {
-  margin-top:6vw;
+  margin-top: 6vw;
   margin-left: 2vw;
+  margin-right: 2vw;
   font-family: $fuente-secundaria;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 
@@ -470,7 +506,7 @@ label{
 
 
 .marginfinal {
-  margin-top: 25%;
+  margin-top: 4vw;
 }
 
 .bordeCardFinal {
@@ -488,51 +524,51 @@ label{
   border-radius: 5vw 5vw 5vw 5vw;
 }
 
-.letrafinal{
+.letrafinal {
   font-size: 4vw;
 }
 
-.sizedibujo{
- width: 40vw;
+.sizedibujo {
+  width: 34vw;
 }
 
-.dibujos{
+.dibujos {
   position: relative;
- top: -29vw;
+  top: -29vw;
 }
 
-.gus{
-  left: -10vw;
+.gus {
+  padding-right: 10vw;
 }
 
-.mila{
-  left: 12vw;
+.mila {
+  padding-left: 10vw;
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 
   .imagenS {
-    margin-top: 43vw;
+    margin-top: 61vw;
   }
 
   .imgFloresArriba {
-    height: 50vw;
-    width: 50vw;
-    padding-left: 25vw;
-    padding-right: 25vw;
+    height: 70vw;
+    width: 70vw;
+    padding-left: 16vw;
+    padding-right: 16vw;
   }
 
-  .imgCorazon{
-    height: 30vw;
-    width: 35vw;
-    left: 30vw;
-    top: 110vw;
+  .imgCorazon {
+    height: 27vw;
+    width: 33vw;
+    left: 32vw;
+    top: 128vw;
   }
 
 
   .TextoUno {
     font-size: $sizeFuenteUnoMoviles;
-    top: 50vw;
+    top: 68vw;
     padding-left: 39vw;
     padding-right: 39vw;
   }
@@ -540,29 +576,33 @@ label{
   .Texto-Secundario {
     position: absolute;
     font-size: $sizeFuenteUnoMoviles - 4;
-    top: 55vw;
-    margin-left: 19vw;
-    margin-right: 19vw;
+    top: 77vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
   }
 
-  .Texto-Terciario{
+  .Texto-Terciario {
     font-size: 1.4rem;
     position: absolute;
-    top: 117vw;
+    top: 134vw;
     left: 39vw;
   }
 
-  .Texto-TerciarioDos{
+  .Texto-TerciarioDos {
     font-size: 1.4rem;
     position: absolute;
-    top: 124vw;
+    top: 142vw;
     left: 43vw;
   }
 
+  .txtCalendario {
+    font-size: $sizeFuenteUnoMoviles - 2;
+  }
 
-  .inputInicio{
-      top: 96vw;
-      left: 19vw;
+
+  .inputInicio {
+    top: 114vw;
+    left: 25vw;
 
   }
 
@@ -624,8 +664,8 @@ label{
 
   .Leyenda {
     top: 67%;
-    margin-left: 13%;
-    margin-right: 13%;
+    padding-left: 12vw;
+    padding-right: 12vw;
     font-size: $sizeFuenteUnoMoviles - 4;
   }
 
@@ -647,12 +687,12 @@ label{
     margin-bottom: 2%;
   }
 
-  .ContainerFalta{
+  .ContainerFalta {
     margin-left: 5vw;
     gap: 4vw;
   }
 
-  .numero{
+  .numero {
     font-size: $sizeFuenteUnoMoviles - 3;
     border: dashed 2px $colorsexto;
   }
@@ -661,7 +701,7 @@ label{
     font-size: $sizeFuenteUnoMoviles - 2;
   }
 
-  .InfomodalForm{
+  .InfomodalForm {
     font-size: $sizeFuenteUnoMoviles - 4;
   }
 
@@ -688,9 +728,10 @@ label{
   .IndicacionDos {
     margin-left: 3%;
     margin-right: 3%;
+    font-size: $sizeFuenteUnoMoviles - 2.7;
   }
 
-  .imgOKOrNot{
+  .imgOKOrNot {
     padding-right: 23vw;
     padding-left: 23vw;
   }
@@ -704,13 +745,13 @@ label{
   }
 
   .imgFloresArriba {
-    height: 45vw;
-    width: 45vw;
+    height: 47vw;
+    width: 47vw;
     padding-left: 25vw;
     padding-right: 25vw;
   }
 
-  .imgloadding{
+  .imgloadding {
     left: 34vw;
   }
 
@@ -730,32 +771,32 @@ label{
   }
 
 
-  .imgCorazon{
+  .imgCorazon {
     height: 25vw;
     width: 30vw;
     left: 35vw;
     top: 105vw;
   }
 
-  .Texto-Terciario{
+  .Texto-Terciario {
     font-size: 3rem;
     position: absolute;
     top: 109vw;
     left: 41vw;
   }
 
-  .Texto-TerciarioDos{
+  .Texto-TerciarioDos {
     font-size: 3rem;
     position: absolute;
-    top: 114vw;
+    top: 116vw;
     left: 45vw;
   }
 
-  .inputInicio{
-    top: 95vw;
-    left: 24vw;
+  .inputInicio {
+    top: 92vw;
+    left: 25vw;
 
-}
+  }
 
   .Imagen {
     width: 110%;
@@ -817,8 +858,8 @@ label{
   .Leyenda {
     font-size: $sizeTablet - 3;
     top: 74vw;
-    margin-left: 11vw;
-    margin-right: 11vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
   }
 
   .SeparacionUno {
@@ -836,12 +877,12 @@ label{
     margin-bottom: 2%;
   }
 
-  .ContainerFalta{
+  .ContainerFalta {
     margin-left: 8vw;
     gap: 3vw;
   }
 
-  .numero{
+  .numero {
     font-size: $sizeTablet - 3;
     border: dashed 4px $colorsexto;
   }
@@ -851,18 +892,18 @@ label{
   }
 
   .Indicacion {
-    font-size: $sizeTablet  - 3;
+    font-size: $sizeTablet - 3;
   }
 
   .InfoValor {
-    font-size: $sizeTablet  - 3;
+    font-size: $sizeTablet - 3;
   }
 
   .BtnDatos {
     padding: 17px 24%;
     margin-top: 4%;
     margin-bottom: 3vw;
-    font-size: $sizeTablet  - 4;
+    font-size: $sizeTablet - 4;
     border-radius: 30px 30px 30px 30px;
   }
 
@@ -871,11 +912,15 @@ label{
     right: 41vw;
   }
 
-  .InfomodalForm{
+  .InfomodalForm {
     font-size: $sizeTablet - 3;
   }
 
-  .btnasistencia{
+  .txtCalendario {
+    font-size: $sizeTablet - 2;
+  }
+
+  .btnasistencia {
     font-size: $sizeTablet - 3;
   }
 
@@ -885,7 +930,7 @@ label{
 
   .close {
     margin-top: 1vw;
-    margin-right: 4vw;
+    margin-right: 7vw;
     font-size: 10vw;
 
   }
@@ -903,10 +948,10 @@ label{
     height: 90vw;
   }
 
-  .imgDressCode{
-    height: 130vw;
-    padding-left: 10vw;
-    padding-right: 3vw;
+  .imgDressCode {
+    height: 123vw;
+    padding-left: 7vw;
+    padding-right: 8vw;
   }
 
   .card {
@@ -917,7 +962,7 @@ label{
   }
 
 
-  .imgOKOrNot{
+  .imgOKOrNot {
     padding-right: 27vw;
     padding-left: 26vw;
   }
@@ -934,8 +979,8 @@ label{
 
 
   .imgFloresArriba {
-    height: 45vw;
-    width: 45vw;
+    height: 48vw;
+    width: 48vw;
     padding-left: 25vw;
     padding-right: 25vw;
   }
@@ -956,19 +1001,19 @@ label{
   }
 
 
-  .imgCorazon{
+  .imgCorazon {
     height: 25vw;
     width: 30vw;
     left: 32vw;
     top: 105vw;
   }
 
-  .imgloadding{
+  .imgloadding {
     left: 38vw;
   }
 
 
-  .Texto-Terciario{
+  .Texto-Terciario {
     font-size: $sizeFuenteUno - 3;
     position: absolute;
     top: 110vw;
@@ -976,19 +1021,19 @@ label{
 
   }
 
-  .Texto-TerciarioDos{
+  .Texto-TerciarioDos {
     font-size: $sizeFuenteUno - 3;
     position: absolute;
-    top: 115vw;
+    top: 117vw;
     left: 43vw;
   }
 
 
-  .inputInicio{
-    top: 95vw;
-    left: 24vw;
+  .inputInicio {
+    top: 92vw;
+    left: 25vw;
 
-}
+  }
 
   .imgflorAbajo {
     width: 100%;
@@ -1048,8 +1093,8 @@ label{
 
   .Leyenda {
     top: 70%;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
     font-size: $sizeFuenteUno - 3;
   }
 
@@ -1072,13 +1117,13 @@ label{
     margin-bottom: 2%;
   }
 
-  .ContainerFalta{
+  .ContainerFalta {
     margin-left: 9vw;
     gap: 2vw;
   }
 
-  .numero{
-    font-size: $sizeFuenteUno  - 3;
+  .numero {
+    font-size: $sizeFuenteUno - 3;
     border: dashed 19px $colorsexto;
   }
 
@@ -1086,27 +1131,27 @@ label{
     font-size: $sizeFuenteUno - 1;
   }
 
-  .InfomodalForm{
+  .InfomodalForm {
     font-size: $sizeFuenteUno - 3;
   }
 
-  .btnasistencia{
+  .btnasistencia {
     font-size: $sizeFuenteUno - 3;
   }
 
   .Indicacion {
-    font-size: $sizeFuenteUno  - 3;
+    font-size: $sizeFuenteUno - 3;
   }
 
   .InfoValor {
-    font-size: $sizeFuenteUno  - 3;
+    font-size: $sizeFuenteUno - 3;
   }
 
   .BtnDatos {
     padding: 17px 16%;
     margin-top: 4%;
     margin-bottom: 4vw;
-    font-size: $sizeFuenteUno  - 3;
+    font-size: $sizeFuenteUno - 3;
     border-radius: 60vw 60vw 60vw 60vw;
   }
 
@@ -1115,15 +1160,22 @@ label{
   }
 
   .close {
-    margin-top: 7vw;
-    margin-right: 2vw;
+    margin-top: 11vw;
+    margin-right: 12vw;
     font-size: 10vw;
 
   }
 
-  .imgDressCode{
-    height: 140vw;
-    padding-left: 0vw;
+  .imgDressCode {
+    height: 105vw;
+    padding-left: 7vw;
+    padding-right: 8vw;
+  }
+
+  .imgDressCodeDos {
+    height: 53vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 
   .carousel img {
@@ -1131,7 +1183,7 @@ label{
     height: 93vw;
   }
 
-  .imgOKOrNot{
+  .imgOKOrNot {
     padding-right: 29vw;
     padding-left: 26vw;
   }
