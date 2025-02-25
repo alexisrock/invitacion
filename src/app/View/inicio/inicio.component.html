@@ -1,15 +1,15 @@
 
 <div class="">
-  <img [src]="imgFlores"  loading="lazy" class="imgFloresArriba" alt="esta es  la  dos"  />
-  <img [src]="imgSobre"  class="imagenS" alt="esta es  la  uno" />
+  <img [src]="imgFlores"  loading="lazy" class="positionAbs imgFloresArriba" alt="esta es  la  dos"  />
+  <img [src]="imgSobre"  loading="eager" class="imagenS" alt="esta es  la  uno" />
 
-  <div class=" colorTerceroFuente  taCenter   TextoUno">
+  <div class=" colorTerceroFuente  taCenter   EstiloLetra TextoUno">
     ¡Hola!
   </div>
 
 <br>
 
-  <div class="taCenter  Texto-Secundario">
+  <div class="taCenter  EstiloLetra Texto-Secundario">
     ¡Sí! Nos casamos y queremos que nos acompañes a celebrar el amor en nuestro día
   </div>
 
@@ -21,16 +21,16 @@
 
   </div>
   <div class="taCenter " (click)="siguientepagina()" >
-    <img [src]="imgCorazon" loading="lazy" class="imgCorazon" alt="esta es btn del corazon" >
+    <img [src]="imgCorazon" loading="lazy" class="positionAbs imgCorazon" alt="esta es btn del corazon" >
     <div class="error">
       <p *ngIf="error== true"> {{message}}.</p>
 
     </div>
 
-    <div class="taCenter  Texto-Terciario">
+    <div class="taCenter  Txt-Corazon Texto-Terciario">
       Ingresa
     </div>
-    <div class="taCenter  Texto-TerciarioDos">
+    <div class="taCenter   Txt-Corazon Texto-TerciarioDos">
       aquí
     </div>
 

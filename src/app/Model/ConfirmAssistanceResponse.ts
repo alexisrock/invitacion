@@ -1,3 +1,3 @@
-export interface ConfirmAssistanceResponse {
+export interface BaseResponse {
   message: string
 }

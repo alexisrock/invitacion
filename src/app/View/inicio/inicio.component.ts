@@ -5,14 +5,13 @@ import * as appSettings from '../../../../public/appsettings.json';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BackendServiceService } from '../../Service/backend-service.service';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { LoginResponse } from '../../Model/LoginResponse';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [FormsModule, CommonModule,MatProgressSpinnerModule ],
+  imports: [FormsModule, CommonModule ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.scss'
 })
@@ -33,7 +32,7 @@ export class InicioComponent {
 
  @ContentChild("loading")
  customLoadingIndicator: TemplateRef<any> | null = null;
-  constructor(public router: Router, private service: BackendServiceService) {
+  constructor(public router: Router, private readonly service: BackendServiceService) {
     this.loading$ = service.loading$;
     if (typeof window !== 'undefined') {
       this.iniciarSonido()
@@ -43,7 +42,7 @@ export class InicioComponent {
   }
 
   iniciarSonido() {
-    this.audio = new Audio('/audio.mp3');
+    // this.audio = new Audio('/audio.mp3');
     // this.audio.play();
   }
 
@@ -57,11 +56,11 @@ export class InicioComponent {
             this.service.setCurrentLoginResponse(data);
             this.service.loadingOff();
             this.router.navigateByUrl('segundaParte');
-
           }
-          else
+          else{
             this.ocultarMessageError("El código no es valido");
             this.service.loadingOff();
+          }
         }
       )
     }

@@ -12,8 +12,25 @@
   <span class="close" (click)="ModalSegunda(false, 0)">&times;</span>
   <div class="colorSecundarioFondo card taCenter modal-content">
     <div><img [src]="imgAnillos" class="imgFlor" loading="lazy" alt="Ícono de anillos"> </div>
+    <div [style]="{'display': displaymessage===true ? 'block' : 'none'}"  [class]="{'MessageResponse': validaCampos== true,'MessageValidation': validaCampos == false }" >
+      {{messageRespobse}}
+    </div>
+
+
 
     <div class="modal-body">
+
+
+      <div [style]="{'display': displayLoadding===true ? 'block' : 'none'}">
+        <div [class]="{'spinner-container': displayLoadding===true }"
+          [style]="{'display': displayLoadding===true ? 'block' : 'none'}">
+          <img [src]="imgLoading" class="imgloadding" height="250" width="250" alt="loadding">
+
+
+        </div>
+      </div>
+
+
 
 
       <!-- Guardar fecha-->
@@ -22,6 +39,7 @@
         <br>
         <button class="BtnModalEnviar btnasistencia ">GUARDAR FECHA</button>
         <br>
+        <img [src]="imgcalendario" alt="calendario" class="imgCalendario"  >
         <br>
         <a href="https://calendar.app.google/2UhbNx9Mg1cMZFKF7" class="txtCalendario">Agregar
           evento a tu calendario</a>
@@ -34,6 +52,7 @@
       <div class="AsistenciaBoda" [style]="{'display': seccion===2 ? 'block' : 'none'}">
         <button class="BtnModalEnviar btnasistencia">¿QUIÉN ASISTIRÁ?</button>
         <br>
+
         <br>
         <div *ngFor="let invitado of listInvitados; let i = index">
 
@@ -44,16 +63,15 @@
             <div>
               <label class="colorSecundarioFondo colorTerceroFuenteRojo">
                 Confirmado:
-                <input type="checkbox" (ngModel)="invitado.confirmado" [checked]="invitado.confirmado === true"
-                  disabled>
+                <input type="checkbox" [checked]="invitado.confirmado == true" readonly onclick="return false;">
               </label>
             </div>
             <div>
               <label class="colorSecundarioFondo colorTerceroFuenteRojo">
                 Asistencia:
-                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === true"
+                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia == true"
                   (change)="invitado.asistencia = true; addInvitadosCA(invitado.id, true)"> Yes
-                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia === false"
+                <input type="radio" [name]="'asistencia-' + i" [checked]="invitado.asistencia == false"
                   (change)="invitado.asistencia = false; addInvitadosCA(invitado.id, false)"> No
               </label>
             </div>
@@ -64,8 +82,8 @@
 
         <br>
         <div class="taCenter">
-          <label class="colorTerceroFuenteRojo">IMPORTANTE</label><br>
-          <label class="colorTerceroFuente">Los niños se quedan en casa</label>
+          <label for="" class="colorTerceroFuenteRojo">IMPORTANTE</label><br>
+          <label for="" class="colorTerceroFuente">Los niños se quedan en casa</label>
         </div>
         <br>
         <br>
@@ -77,12 +95,16 @@
       <!-- Como llegar -->
       <div [style]="{'display': seccion===3 ? 'block' : 'none'}">
         <br>
+
         <br>
         <button class="BtnModalEnviar btnasistencia ">UBICACIÒN</button>
         <br>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.83047695894!2d-74.32024829999999!3d4.6016133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f739879a69be7%3A0xacc0490c2cca43!2sChicaque%2C%20San%20Antonio%20Del%20Tequendama%2C%20Cundinamarca!5e0!3m2!1ses-419!2sco!4v1730756343136!5m2!1ses-419!2sco"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="mapalugar"></iframe>
         <br>
-        <a href="https://www.chicaque.com/como-llegar-a-chicaque" class="txtCalendario">Agregar
-          evento a tu calendario</a>
+        <a href="https://www.chicaque.com/como-llegar-a-chicaque" class="txtCalendario">Cómo llegar</a>
         <br>
         <br>
       </div>
@@ -96,22 +118,24 @@
         <p class="colorTerceroFuenteRojo mensajeMusica">Elige bien, puedes recomendar solo una.</p>
 
         <div>
-          <input class="colorSecundarioFondo colorTerceroFuente  InfomodalForm" type="text" placeholder="www.">
+          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" [(ngModel)]="urlSong" type="text"
+            placeholder="www.">
         </div>
         <div>
-          <input class="colorSecundarioFondo colorTerceroFuente   InfomodalForm" type="text" placeholder="momento">
+          <input class="colorSecundarioFondo colorTerceroFuente InfomodalForm" [(ngModel)]="momento" type="text"
+            placeholder="momento">
 
         </div>
         <br>
         <br>
-        <button class="BtnModalEnviar btnasistencia">Sugerir canción</button>
+        <button class="BtnModalEnviar btnasistencia" (click)="sendSuggestSong()">Sugerir canción</button>
         <br>
       </div>
 
 
       <!-- Dress Code -->
       <div class="AsistenciaBoda" [style]="{'display': seccion===5 ? 'block' : 'none'}">
-        <div class="colorPrincipalFuente">Dress Code</div>
+        <div class="EstiloLetra colorPrincipalFuente">Dress Code</div>
 
         <div class="carouselDC">
           <div class="carousel-innerDC" [style.transform]="transform">
@@ -126,24 +150,32 @@
 
 
 
-              <div>
-                <h2 [style]="{'display': i + 1 == 1  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
-                <img [src]="image.src"[style]="{'display': i + 1 == 1  ? 'block' : 'none' }" loading="lazy" class="imgDressCode" alt="Imadc{{ i + 1 }}">
+              <div [style]="{'display': i + 1 == 1  ? 'block' : 'none' }">
+                <Label for="" [style]="{'display': i + 1 == 1  ? 'block' : 'none' }" class="EstiloLetrados">Nuestra paleta
+                  de colores</Label>
+                <img [src]="image.src" [style]="{'display': i + 1 == 1  ? 'block' : 'none' }" loading="lazy"
+                  class="imgDressCode" alt="Imadc{{ i + 1 }}">
               </div>
 
-              <div     >
-                <h2 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">Nuestra paleta de colores</h2>
-                <h3 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">¡IMPORTANTE !</h3>
-                <h3 [style]="{'display': i + 1 == 2  ? 'block' : 'none' }">Nos reservamos los siguientes colores:</h3>
-                <img [src]="image.src" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }" [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
+              <div [style]="{'display': i + 1 == 2  ? 'block' : 'none' }" >
+
+                <Label for="" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }"
+                  class="letraCatchy-mage colorTerceroFuenteRojo">¡IMPORTANTE !</Label><br>
+                <Label for="" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }" class="EstiloLetra">Nos reservamos
+                  los siguientes colores:</Label>
+                <img [src]="image.src" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }"
+                 class="imgDressCodeDos" loading="lazy"
+                  alt="Imadc{{ i + 1 }}">
+                <label for="" [style]="{'display': i + 1 == 2  ? 'block' : 'none' }" class="EstiloLetra">A continuaciòn
+                  te mostramos algunas ideas como inspiraciòn</label>
               </div>
 
-              <div>
-                <img [src]="image.src" [style]="{'display': i + 1 !== 7 && i + 1 != 1 && i + 1 != 2? 'block' : 'none' }"  [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
+              <div [style]="{'display': i + 1 != 1 && i + 1 != 2? 'block' : 'none' }">
+                <img [src]="image.src" [style]="{'display': i + 1 != 1 && i + 1 != 2? 'block' : 'none' }"
+               [class]="{'imgDressCodetres': i + 1 == 4,'imgDressCodecuatro': i + 1 == 5, 'imgDressCodeCinco': i + 1 == 6, 'imgDressCodeSeis': i + 1 == 7,   'imgDressCode': i + 1 !== 4 && i + 1 !== 5 && i + 1 !== 6 && i + 1 !== 7  }"  loading="lazy"
+                  alt="Imadc{{ i + 1 }}">
               </div>
-              <div>
-                <img [src]="image.src" [style]="{'display': i + 1 == 7 && i + 1 != 1 && i + 1 != 2? 'block' : 'none' }"  [class]="{'imgDressCodeDos': i + 1 == 2, 'imgDressCode': i + 1 !== 2 }" loading="lazy"   alt="Imadc{{ i + 1 }}">
-              </div>
+
 
             </div>
           </div>
@@ -184,20 +216,24 @@
           cualquier otra cosa que nos quieras recomendar.</p>
         <div>
 
-          <textarea class="colorSecundarioFondo colorTerceroFuente InfomodalForm" name="" id=""></textarea>
+          <textarea class="colorSecundarioFondo colorTerceroFuente InfomodalForm" [(ngModel)]="observacion"></textarea>
         </div>
         <br>
         <br>
 
 
-        <button class="BtnModalEnviar btnasistencia">Enviar</button>
+        <button class="BtnModalEnviar btnasistencia" (click)="sendObservation()">Enviar</button>
 
 
 
       </div>
 
 
+
       <br>
     </div>
+
+
   </div>
+
 </div>
