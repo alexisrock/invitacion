@@ -14,6 +14,7 @@ export class TenerEncuentaComponent {
   imgDressCode: string =appSettings.imgDressCode;
   imgTuFoto: string =appSettings.imgTuFoto;
   imgTipYNotas: string =appSettings.imgTipYNotas;
+  imgRegalo: string =appSettings.imgRegalo;
   faMusic = faMusic
   fashirt = faShirt
   faClipBoard = faClipboardList

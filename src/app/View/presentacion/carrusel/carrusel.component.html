@@ -8,7 +8,7 @@
 
 <div class="carousel">
   <div class="carousel-inner" [style.transform]="transform">
-    <img *ngFor="let image of images; let i = index" [src]="image.src" loading="lazy"  class="imgCardCarru"  alt="Ima{{ i + 1 }}">
+    <img *ngFor="let image of images; let i = index" [src]="image.src" loading="lazy"  [class]="{'carouselnormal': i + 1 !== 24, 'carouselgit': i + 1 == 24 }"  alt="Ima{{ i + 1 }}">
 
   </div>
   <button (click)="prev()" class="btn left-button">&#10094;&#10094;</button>

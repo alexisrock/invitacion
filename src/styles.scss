@@ -31,7 +31,9 @@
  $sizeFuenteUnoMoviles: 8.5vw;
 
  body {
-   background-color: $colorPrincipal;
+
+  background-image: url('../public/img/fondo.png');
+  background-size: 80%;
  }
 
  label {
@@ -184,7 +186,7 @@
    background-color: rgba(0, 0, 255, 0.5);
    mix-blend-mode: luminosity;
    align-items: center;
-   opacity: 47%;
+
    z-index: -1;
  }
 
@@ -323,16 +325,16 @@
 
 
  .MessageValidation {
-  font-size: $sizeFuenteUnoMoviles - 2;
-  background-color:  $colorTerciario;
-  color: #fff;
-  padding: 2vw 1vw;
-  border-radius: 18vw 18vw 18vw 18vw;
-  position: absolute;
-  top: 29vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
-}
+   font-size: $sizeFuenteUnoMoviles - 2;
+   background-color: $colorTerciario;
+   color: #fff;
+   padding: 2vw 1vw;
+   border-radius: 18vw 18vw 18vw 18vw;
+   position: absolute;
+   top: 29vw;
+   padding-left: 4vw;
+   padding-right: 4vw;
+ }
 
 
 
@@ -350,17 +352,17 @@
    top: 7vw;
  }
 
- .imgFlorizquierda{
-  position: absolute;
-  right: 73vw;
-  top: 179vw;
-  width: 23vw;
+ .imgFlorizquierda {
+   position: absolute;
+   right: 73vw;
+   top: 179vw;
+   width: 23vw;
  }
 
  .imgDressCode {
-   height: 122vw;
-   padding-left: 9vw;
-   padding-right: 7vw;
+    height: 122vw;
+    padding-left: 13vw;
+    padding-right: 7vw;
  }
 
  .imgCalendario {
@@ -450,6 +452,11 @@
    margin-top: 9%;
    width: 20vw;
  }
+
+ .iconRetratoObsequio {
+  margin-top: 9%;
+  width: 25vw;
+}
 
  .iconFinal {
    width: 40vw;
@@ -641,33 +648,33 @@
 
 
    .imgDressCodecuatro {
-     height: 118vw;
-     padding-left: 0vw;
-     padding-right: 1vw;
+    height: 118vw;
+    padding-left: 7vw;
+    padding-right: 1vw;
    }
 
 
    .imgDressCodeCinco {
-     height: 99vw;
-     padding-left: 0vw;
-     padding-right: 1vw;
+    height: 120vw;
+    padding-left: 5vw;
+    padding-right: 1vw;
    }
 
    .imgDressCodeSeis {
-     height: 100vw;
-
+    height: 111vw;
+    padding-left: 3%;
    }
 
    .imgDressCodeDos {
-     height: 53vw;
-     padding-left: 15vw;
-     padding-right: 6vw;
+    height: 63vw;
+    padding-left: 27vw;
+    padding-right: 12vw;
    }
 
    .imgDressCodetres {
-     height: 122vw;
-     padding-left: 1vw;
-     padding-right: 1vw
+    height: 122vw;
+    padding-left: 7vw;
+    padding-right: 1vw;
    }
 
 
@@ -784,12 +791,20 @@
      width: 100%;
    }
 
-   .carousel img {
-    width: 84vw;
-    height: 84vw;
-    border-radius: 7vw 7vw 7vw 7vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+   .carouselnormal {
+    width: 85%;
+    height: 85%;
+    border-radius: 15vw 15vw 15vw 15vw;
+    margin-left: 9.8%;
+    margin-right: 5%;
+   }
+
+   .carouselgit {
+     width: 48%;
+     height: 85%;
+     border-radius: 7vw 7vw 7vw 7vw;
+     padding-left: 7.9%;
+     padding-right: 7%;
    }
 
    .IndicacionDos {
@@ -866,7 +881,7 @@
    }
 
    .Imagen {
-     width: 110%;
+    width: 100%;
    }
 
    .Hr1 {
@@ -1009,11 +1024,11 @@
    }
 
    .MessageValidation {
-    font-size: $sizeTablet - 3;
-    top: 17vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
+     font-size: $sizeTablet - 3;
+     top: 17vw;
+     padding-left: 4vw;
+     padding-right: 4vw;
+   }
 
    .iconRetrato {
      font-size: 64px;
@@ -1023,49 +1038,58 @@
      width: 96vw;
    }
 
-   .carousel img {
-    width: 87vw;
-    height: 87vw;
-    margin-left: 3vw;
-    margin-right: 4vw;
+   .carouselnormal{
+    width: 91%;
+    height: 90%;
+    margin-left: 5%;
+    margin-right: 4%;
     border-radius: 3vw 3vw 3vw 3vw;
    }
 
+   .carouselgit {
+    width: 51%;
+    height: 35%;
+    margin-left: 5%;
+    margin-right: 4%;
+    border-radius: 3vw 3vw 3vw 3vw;
+  }
+
+
    .imgDressCode {
-     height: 127vw;
-     padding-left: 12vw;
-     padding-right: 8vw;
+    padding-left: 6vw;
+    padding-right: 8vw;
    }
 
 
    .imgDressCodecuatro {
-     height: 118vw;
-     padding-left: 9vw;
-     padding-right: 13vw;
-   }
+    width: 80%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
 
 
    .imgDressCodeCinco {
-     height: 109vw;
-     padding-left: 9vw;
-     padding-right: 16vw;
+    max-width: 75%;
+        padding-left: 0%;
+        padding-right: 13%;
    }
 
    .imgDressCodeSeis {
-     height: 101vw;
-     padding-left: 10vw;
+    max-width: 70%;
+    padding-left: 2%;
    }
 
    .imgDressCodeDos {
-     height: 52vw;
-     padding-left: 17vw;
-     padding-right: 9vw;
+    height: 96vw;
+    padding-left: 17vw;
+    padding-right: 12vw;
    }
 
    .imgDressCodetres {
-     height: 122vw;
-     padding-left: 5vw;
-     padding-right: 11vw;
+    max-width: 76%;
+        padding-left: 7%;
+        padding-right: 8%;
    }
 
 
@@ -1289,11 +1313,11 @@
    }
 
    .MessageValidation {
-    font-size: $sizeFuenteUno - 3;
-    top: 17vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
+     font-size: $sizeFuenteUno - 3;
+     top: 17vw;
+     padding-left: 4vw;
+     padding-right: 4vw;
+   }
 
 
    .imgCalendario {
@@ -1303,50 +1327,49 @@
    }
 
    .imgDressCode {
-     height: 111vw;
-     padding-left: 7vw;
-     padding-right: 8vw;
+    height: 127vw;
+    padding-left: 5vw;
+    padding-right: 8vw;
    }
 
 
    .imgDressCodecuatro {
-     height: 113vw;
-     padding-left: 0vw;
-     padding-right: 2vw;
+    height: 116vw;
+    padding-left: 8vw;
+    padding-right: 12vw;
    }
 
 
    .imgDressCodeCinco {
-     height: 109vw;
-     padding-left: 0vw;
-     padding-right: 16vw;
+    height: 109vw;
+    padding-left: 11vw;
+    padding-right: 16vw;
    }
 
    .imgDressCodeSeis {
-     height: 101vw;
-     padding-left: 0vw;
+    height: 101vw;
+    padding-left: 8vw;
    }
 
    .imgDressCodeDos {
-     height: 52vw;
-     padding-left: 17vw;
+     height: 97vw;
+     padding-left: 22vw;
      padding-right: 9vw;
    }
 
    .imgDressCodetres {
-     height: 122vw;
-     padding-left: 2vw;
-     padding-right: 11vw;
+    height: 113vw;
+    padding-left: 9vw;
+    padding-right: 11vw;
    }
 
 
-   .carousel img {
-     width: 90vw;
-     height: 90vw;
-     margin-left: 2vw;
-     margin-right: 3vw;
-     border-radius: 3vw 3vw 3vw 3vw;
-     border-radius: 3vw 3vw 3vw 3vw;
+   .carouselnormal{
+    width: 90%;
+    height: 90%;
+    margin-left: 9.2%;
+    margin-right: 3%;
+    border-radius: 3vw 3vw 3vw 3vw;
    }
 
    .imgOKOrNot {
