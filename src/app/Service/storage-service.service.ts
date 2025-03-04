@@ -12,8 +12,11 @@ export class StorageService {
 
   // Obtener de localStorage
   getLocal<T>(key: string): T | null {
-    const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : null;
+    if (key !== null) {
+      const data = localStorage?.getItem(key);
+      return data ? JSON.parse(data) : null;
+    }
+    return null
   }
 
   // Eliminar de localStorage

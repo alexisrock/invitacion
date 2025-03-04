@@ -360,9 +360,11 @@
  }
 
  .imgDressCode {
-    height: 122vw;
-    padding-left: 13vw;
-    padding-right: 7vw;
+
+  width: 75vw;
+  height: 120vw;
+  padding-left: 2.2vw;
+  padding-right: 2vW;
  }
 
  .imgCalendario {
@@ -646,38 +648,6 @@
      font-size: $sizeFuenteUnoMoviles - 2;
    }
 
-
-   .imgDressCodecuatro {
-    height: 118vw;
-    padding-left: 7vw;
-    padding-right: 1vw;
-   }
-
-
-   .imgDressCodeCinco {
-    height: 120vw;
-    padding-left: 5vw;
-    padding-right: 1vw;
-   }
-
-   .imgDressCodeSeis {
-    height: 111vw;
-    padding-left: 3%;
-   }
-
-   .imgDressCodeDos {
-    height: 63vw;
-    padding-left: 27vw;
-    padding-right: 12vw;
-   }
-
-   .imgDressCodetres {
-    height: 122vw;
-    padding-left: 7vw;
-    padding-right: 1vw;
-   }
-
-
    .inputInicio {
      top: 114vw;
      left: 25vw;
@@ -794,7 +764,7 @@
    .carouselnormal {
     width: 85%;
     height: 85%;
-    border-radius: 15vw 15vw 15vw 15vw;
+    border-radius: 10vw 10vw 10vw 10vw;
     margin-left: 9.8%;
     margin-right: 5%;
    }
@@ -1056,41 +1026,15 @@
 
 
    .imgDressCode {
-    padding-left: 6vw;
-    padding-right: 8vw;
+    padding-left: 5%;
+    padding-right: 8%;
+    height: 145%;
    }
 
 
-   .imgDressCodecuatro {
-    width: 80%;
-        padding-left: 0%;
-        padding-right: 0%;
-    }
 
 
 
-   .imgDressCodeCinco {
-    max-width: 75%;
-        padding-left: 0%;
-        padding-right: 13%;
-   }
-
-   .imgDressCodeSeis {
-    max-width: 70%;
-    padding-left: 2%;
-   }
-
-   .imgDressCodeDos {
-    height: 96vw;
-    padding-left: 17vw;
-    padding-right: 12vw;
-   }
-
-   .imgDressCodetres {
-    max-width: 76%;
-        padding-left: 7%;
-        padding-right: 8%;
-   }
 
 
    .card {
@@ -1331,38 +1275,6 @@
     padding-left: 5vw;
     padding-right: 8vw;
    }
-
-
-   .imgDressCodecuatro {
-    height: 116vw;
-    padding-left: 8vw;
-    padding-right: 12vw;
-   }
-
-
-   .imgDressCodeCinco {
-    height: 109vw;
-    padding-left: 11vw;
-    padding-right: 16vw;
-   }
-
-   .imgDressCodeSeis {
-    height: 101vw;
-    padding-left: 8vw;
-   }
-
-   .imgDressCodeDos {
-     height: 97vw;
-     padding-left: 22vw;
-     padding-right: 9vw;
-   }
-
-   .imgDressCodetres {
-    height: 113vw;
-    padding-left: 9vw;
-    padding-right: 11vw;
-   }
-
 
    .carouselnormal{
     width: 90%;

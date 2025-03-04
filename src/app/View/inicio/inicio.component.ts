@@ -20,7 +20,7 @@ export class InicioComponent {
   imgFlores: string = appSettings.imgFlores;
   imgCorazon: string = appSettings.imgCorazon;
   imgLoading: string = appSettings.imgLoading;
-  audio = new Audio();
+
   isPlaying = true;
   currentTime = 0;
   duration = 0;
@@ -34,11 +34,7 @@ export class InicioComponent {
  customLoadingIndicator: TemplateRef<any> | null = null;
   constructor(public router: Router, private readonly service: BackendServiceService) {
     this.loading$ = service.loading$;
-    if (typeof window !== 'undefined') {
-      this.iniciarSonido()
 
-
-    }
   }
 
   iniciarSonido() {
